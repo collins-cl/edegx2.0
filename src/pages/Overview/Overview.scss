@@ -1,0 +1,155 @@
+.overview {
+  .overview-container {
+    margin-top: 1em;
+    padding: 0 0;
+    display: flex;
+    justify-content: space-between;
+
+    .contents {
+      width: 78%;
+
+      .user {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px 1em 15px;
+        border-bottom: 2px solid rgba(211, 211, 211, 0.511);
+
+        .user-profile {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          .avi {
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            border-radius: 10px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .name {
+            .user-name {
+              font-size: 22px;
+              font-weight: 600;
+              letter-spacing: 1px;
+            }
+
+            .rating {
+              display: flex;
+              align-items: center;
+              gap: 3px;
+              margin-top: -5px;
+              color: rgb(109, 108, 108);
+              font-size: 15px;
+            }
+          }
+        }
+
+        .user-contact {
+          display: flex;
+          align-items: center;
+          gap: 1em;
+
+          .details {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            width: 140px;
+            height: 30px;
+            border: 2px solid rgba(211, 211, 211, 0.511);
+            border-radius: 10px;
+            cursor: pointer;
+
+            p {
+              font-size: 12px;
+            }
+          }
+
+          .user-detail-dwn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            width: 30px;
+            height: 30px;
+            border: 2px solid rgba(211, 211, 211, 0.511);
+            border-radius: 10px;
+            cursor: pointer;
+
+            .icon {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .progress-chart {
+      width: 22%;
+      height: fit-content;
+      padding: 12px;
+      background-color: white;
+      border-radius: 10px;
+      border: 1px solid rgba(211, 211, 211, 0.511);
+
+      .title {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .chart {
+        width: 70%;
+        height: 200px;
+      }
+
+      .score-rate {
+        margin-top: 10px;
+
+        .title {
+          font-size: 16px;
+        }
+
+        .ratings {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 10px;
+
+          .rate {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 8px;
+            padding: 0 10px;
+            background-color: rgba(211, 209, 209, 0.364);
+
+            .details {
+              p {
+                font-size: 15px;
+                font-weight: 600;
+              }
+
+              span {
+                font-size: 13px;
+                color: rgb(89, 89, 89);
+              }
+            }
+
+            .star{
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -33,23 +33,23 @@ const Sidebar = () => {
             <NavLink to="/">
               <IoBriefcaseOutline className="icon" /> <p>Overview</p>
             </NavLink>
-            <NavLink to="/analytics">
+            <NavLink to="/wallets">
               <CiWallet className="icon" /> <p>Wallets</p>
             </NavLink>
 
-            <NavLink to="/subscriptions">
+            <NavLink to="/giftcards">
               <CiGift className="icon" /> <p>Giftcards</p>
             </NavLink>
 
-            <NavLink to="/settings">
+            <NavLink to="/transactions">
               <IoBarChartOutline className="icon" /> <p>Transactions</p>
             </NavLink>
 
-            <NavLink to="/access">
+            <NavLink to="/payments">
               <PiTelegramLogo className="icon" /> <p>Payments</p>
             </NavLink>
 
-            <NavLink to="/logout">
+            <NavLink to="/more">
               <LiaTableSolid className="icon" /> <p>More</p>
             </NavLink>
           </div>

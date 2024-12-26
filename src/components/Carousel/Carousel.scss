@@ -1,0 +1,25 @@
+.carousel-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 160px;
+
+    .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+    color: #4caf50;
+  }
+}

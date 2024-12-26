@@ -1,0 +1,143 @@
+.hero {
+  .hero-cnt {
+    .banner {
+      width: 100%;
+      background-color: orangered;
+      height: 180px;
+      border-radius: 10px;
+      color: white;
+
+      .contents {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2em;
+
+        .balance {
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+
+          .title {
+            display: flex;
+            align-items: center;
+            gap: 2em;
+
+            p {
+              font-size: 17px;
+              letter-spacing: 1px;
+              font-weight: bold;
+            }
+
+            .currency {
+              position: relative;
+
+              .select {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 14px;
+                background-color: rgba(255, 255, 255, 0.408);
+                height: 25px;
+                width: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 3px;
+                cursor: pointer;
+              }
+            }
+          }
+
+          .figure {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 2.5em;
+            font-weight: bold;
+          }
+        }
+
+        .toggle {
+          margin-right: 2em;
+          width: 65px;
+          height: 65px;
+          border-radius: 50px;
+          background-color: rgba(255, 255, 255, 0.427);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.485);
+          }
+
+          .icon {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .kyc-card {
+      margin-top: 1.5em;
+      display: flex;
+      justify-content: space-between;
+
+      .card {
+        width: 46.5%;
+        height: 140px;
+        padding: 0 1em;
+        border-radius: 10px;
+      }
+      .card.leaderboard {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        overflow: hidden;
+        background-color: orangered;
+
+        .section {
+          .title {
+            font-size: 17px;
+            font-weight: bold;
+          }
+
+          p {
+            font-size: 15px;
+
+            span {
+              font-weight: bold;
+            }
+          }
+        }
+
+        .sect-image {
+          width: 150px;
+          height: 150px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .card.kyc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        background-color: rgba(234, 234, 234, 0.873);
+
+        p {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

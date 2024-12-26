@@ -24,6 +24,5 @@ body {
   .right-pane {
     width: calc(100% - 310px);
     float: right;
-    padding: 10px;
   }
 }

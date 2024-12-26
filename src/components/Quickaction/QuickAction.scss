@@ -1,0 +1,96 @@
+.quickaction {
+  margin-top: 1.5em;
+
+  .quick-act-title {
+    font-weight: bold;
+  }
+
+  .quick-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+
+    a {
+      width: 175px;
+      height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      border-radius: 10px;
+      background-color: rgb(242, 242, 242);
+
+      .icon-case {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: 60px;
+        border-radius: 50px;
+        background-color: blue;
+
+        .icon {
+          font-size: 25px;
+        }
+      }
+
+      &:hover {
+        background-color: rgb(246, 114, 66);
+      }
+
+      &:nth-child(1) .icon-case {
+        background-color: rgba(251, 230, 191, 0.579);
+
+        .icon {
+          color: rgb(255, 166, 0);
+        }
+      }
+      &:nth-child(2) .icon-case {
+        background-color: rgb(255, 224, 224);
+
+        .icon {
+          color: red;
+        }
+      }
+      &:nth-child(3) .icon-case {
+        background-color: rgb(211, 249, 211);
+
+        .icon {
+          color: green;
+        }
+      }
+      &:nth-child(4) .icon-case {
+        background-color: rgb(211, 249, 211);
+
+        .icon {
+          color: green;
+        }
+      }
+      &:nth-child(5) .icon-case {
+        background-color: rgba(251, 230, 191, 0.579);
+
+        .icon {
+          color: rgb(255, 166, 0);
+        }
+      }
+      &:nth-child(6) .icon-case {
+        background-color: rgb(255, 224, 224);
+
+        .icon {
+          color: red;
+        }
+      }
+
+      p {
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .carousel-wrapper {
+    margin-top: 1.5em;
+  }
+}

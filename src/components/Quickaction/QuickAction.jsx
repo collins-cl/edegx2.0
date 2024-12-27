@@ -9,6 +9,7 @@ import {
 import { FiArrowDownLeft } from "react-icons/fi";
 import { AiFillGift } from "react-icons/ai";
 import Carousel from "../Carousel/Carousel";
+import Cryptos from "../Cryptos/Cryptos";
 
 const QuickAction = () => {
   return (
@@ -61,6 +62,10 @@ const QuickAction = () => {
 
       <div className="carousel-wrapper">
         <Carousel />
+      </div>
+
+      <div className="cryptos-wrapper">
+        <Cryptos />
       </div>
     </div>
   );

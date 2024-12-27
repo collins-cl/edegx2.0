@@ -1,0 +1,86 @@
+.cryptos {
+  .title {
+    font-weight: bold;
+  }
+
+  .assets-container {
+    margin-top: 1em;
+
+    .head {
+      height: 60px;
+      padding: 0 2em;
+      background-color: rgb(238, 238, 238);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 19%;
+      }
+    }
+
+    .contents {
+      margin-top: 1em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+
+      .token {
+        padding: 0 2em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 3px solid rgba(188, 188, 188, 0.26);
+
+        div {
+          width: 19%;
+          height: 60px;
+          display: flex;
+          align-items: center;
+        }
+
+        .asset {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          img {
+            width: 35px;
+            height: 35px;
+          }
+        }
+
+        .price {
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .price-change {
+          font-size: 18px;
+          color: green;
+          display: flex;
+          align-items: center;
+        }
+
+        .trade {
+          .btn {
+            width: 150px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            text-transform: capitalize;
+            font-weight: bold;
+            font-size: 15px;
+            background-color: rgb(238, 238, 238);
+          }
+
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

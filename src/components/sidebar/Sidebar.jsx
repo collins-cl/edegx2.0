@@ -1,22 +1,6 @@
 import "../sidebar/Sidebar.scss";
 import { Link, NavLink } from "react-router-dom";
-import {
-  BiCoinStack,
-  PiHandHeart,
-  FaRegStar,
-  IoKeyOutline,
-  IoBriefcaseOutline,
-  TbUsersMinus,
-  HiOutlineArrowRight,
-  LuMail,
-  IoCallOutline,
-  LuBellPlus,
-  HiOutlineBellSnooze,
-  TfiViewListAlt,
-  MdOutlineSupportAgent,
-  IoSettingsOutline,
-  MdLogout,
-} from "../../Icons";
+import { IoBriefcaseOutline, HiOutlineArrowRight } from "../../Icons";
 import { LiaTableSolid } from "react-icons/lia";
 import { CiGift, CiWallet } from "react-icons/ci";
 import { IoBarChartOutline } from "react-icons/io5";
@@ -26,7 +10,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar-cont">
       <div className="sidebar-wrapper">
-        <Link className="logo">UseFurex</Link>
+        <Link className="logo">Jagaban</Link>
 
         <div className="side-tag">
           <div className="side-tag-li">

@@ -1,0 +1,46 @@
+.payments {
+  padding: 1.5em;
+  margin-top: 60px;
+
+  .wrapper {
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+
+    .box {
+      border-radius: 10px;
+      background-image: url("../../assets/payments/airtime.svg");
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 45%;
+      height: 160px;
+      display: block;
+
+      &:nth-child(2) {
+        background-image: url("../../assets/payments/data.svg");
+      }
+      &:nth-child(3) {
+        background-image: url("../../assets/payments/cable.svg");
+      }
+      &:nth-child(4) {
+        background-image: url("../../assets/payments/internet.svg");
+      }
+      &:nth-child(5) {
+        background-image: url("../../assets/payments/betting.svg");
+      }
+      &:nth-child(6) {
+        background-image: url("../../assets/payments/utility.svg");
+      }
+      &:nth-child(7) {
+        background-image: url("../../assets/payments/estate.svg");
+      }
+      &:nth-child(8) {
+        background-image: url("../../assets/payments/insurance.svg");
+      }
+    }
+  }
+}

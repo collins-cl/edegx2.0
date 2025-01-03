@@ -6,6 +6,8 @@ import Topbar from "./components/Topbar/Topbar";
 import Wallets from "./pages/Wallets/Wallets";
 import Giftcards from "./pages/Giftcards/Giftcards";
 import Transactions from "./pages/Transactions/Transactions";
+import Payments from "./pages/Payments/Payments";
+import More from "./pages/More/More";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path="/wallets" element={<Wallets />} />
             <Route path="/giftcards" element={<Giftcards />} />
             <Route path="/transactions" element={<Transactions />} />
+            <Route path="/payments" element={<Payments />} />
+            <Route path="/more" element={<More />} />
           </Routes>
         </div>
       </div>

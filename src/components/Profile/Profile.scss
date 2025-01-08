@@ -1,0 +1,125 @@
+.profile {
+  margin-top: 1em;
+  width: 100%;
+
+  .wrapper {
+    height: fit-content;
+    padding: 1.5em 3em;
+    border-radius: 10px;
+    background-color: rgb(241, 241, 241);
+
+    .container {
+      background-color: white;
+      padding: 1.5em 0;
+      border-radius: 10px;
+
+      .border {
+        width: 90%;
+        margin: auto;
+        padding: 1em 2em;
+        border-radius: 10px;
+        // border: 2px solid rgba(182, 180, 180, 0.289);
+
+        .profile-title {
+          font-size: 17px;
+          font-weight: bold;
+        }
+
+        .profile-details {
+          margin-top: 1em;
+          display: flex;
+          justify-content: space-between;
+
+          .section {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            margin-top: 1em;
+
+            .card {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              height: 80px;
+              border-bottom: 1px solid rgba(168, 167, 167, 0.714);
+
+              p {
+                color: rgb(96, 95, 95);
+              }
+
+              h3 {
+                font-size: 16px;
+              }
+            }
+
+            .alert {
+              margin-top: 1em;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              width: 80%;
+              height: 130px;
+              border-radius: 10px;
+              padding: 0 1.5em;
+              background-color: rgb(241, 241, 241);
+
+              .alrt {
+                width: 20%;
+                p {
+                  height: 40px;
+                  width: 40px;
+                  border-radius: 50px;
+                  color: red;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border: 1px solid red;
+                }
+              }
+
+              .alert-info {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .section-2 {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .avatar {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 190px;
+              width: 190px;
+              border: 1px solid rgb(161, 160, 160);
+              border-radius: 50%;
+
+              p {
+                font-size: 22px;
+                font-weight: bold;
+              }
+            }
+
+            .upgrade {
+              margin-top: 3em;
+              width: 80%;
+              height: 50px;
+              border-radius: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: white;
+              cursor: pointer;
+              background-color: #029588;
+            }
+          }
+        }
+      }
+    }
+  }
+}

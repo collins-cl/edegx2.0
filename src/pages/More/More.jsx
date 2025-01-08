@@ -4,6 +4,9 @@ import "../More/More.scss";
 import { NavLink, useSearchParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Profile from "../../components/Profile/Profile";
+import SecurityTab from "../../components/SecurityTab/SecurityTab";
+import Preference from "../../components/Preferences/Preference";
+import Others from "../../components/Others/Others";
 
 const More = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -76,6 +79,18 @@ const Content = ({ option }) => {
   switch (option) {
     case "profile":
       return <Profile />;
+
+    case "security":
+      return <SecurityTab />;
+
+    case "preference":
+      return <Preference />;
+
+    case "others":
+      return <Others />;
+
+    default:
+      <Profile />;
   }
 };
 

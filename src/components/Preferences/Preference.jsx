@@ -1,7 +1,10 @@
+import { MdVerified } from "react-icons/md";
 import "../Preferences/Preference.scss";
 // import { useState } from "react";
 // import { Modal } from "@mui/material";
-import { FaAngleRight, FaUser } from "react-icons/fa6";
+import { FaAngleRight } from "react-icons/fa6";
+import { CiBadgeDollar } from "react-icons/ci";
+import { TbCards } from "react-icons/tb";
 
 const Preference = () => {
   return (
@@ -16,12 +19,12 @@ const Preference = () => {
                 <div className="box">
                   <div className="flex-1">
                     <div className="avatar">
-                      <FaUser className="icon" />
+                      <MdVerified className="icon" />
                     </div>
                     <div className="info">
-                      <h3>Change PIN</h3>
+                      <h3>Verfication</h3>
 
-                      <p>Create and change pin seamlessy</p>
+                      <p>Verify your identity to increase limits</p>
                     </div>
                   </div>
 
@@ -33,12 +36,12 @@ const Preference = () => {
                 <div className="box">
                   <div className="flex-1">
                     <div className="avatar">
-                      <FaUser className="icon" />
+                      <CiBadgeDollar className="icon" />
                     </div>
                     <div className="info">
-                      <h3>Change Password</h3>
+                      <h3>Currency</h3>
 
-                      <p>Create and change password seamlessy</p>
+                      <p>Change your prumary currency from NGN</p>
                     </div>
                   </div>
 
@@ -50,12 +53,12 @@ const Preference = () => {
                 <div className="box">
                   <div className="flex-1">
                     <div className="avatar">
-                      <FaUser className="icon" />
+                      <TbCards className="icon" />
                     </div>
                     <div className="info">
-                      <h3>2FA Authentication</h3>
+                      <h3>Accounts</h3>
 
-                      <p>Further secure your account and funds</p>
+                      <p>Add and remove bank accounts</p>
                     </div>
                   </div>
 

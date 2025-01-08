@@ -1,7 +1,9 @@
 // import { useState } from "react";
+import { IoMdLock } from "react-icons/io";
 import "./SecurityTab.scss";
 // import { Modal } from "@mui/material";
 import { FaAngleRight, FaUser } from "react-icons/fa6";
+import { TbAuth2Fa } from "react-icons/tb";
 
 const SecurityTab = () => {
   // const [open, setOpen] = useState(false);
@@ -37,7 +39,7 @@ const SecurityTab = () => {
                 <div className="box">
                   <div className="flex-1">
                     <div className="avatar">
-                      <FaUser className="icon" />
+                      <IoMdLock className="icon" />
                     </div>
                     <div className="info">
                       <h3>Change Password</h3>
@@ -54,7 +56,7 @@ const SecurityTab = () => {
                 <div className="box">
                   <div className="flex-1">
                     <div className="avatar">
-                      <FaUser className="icon" />
+                      <TbAuth2Fa className="icon" />
                     </div>
                     <div className="info">
                       <h3>2FA Authentication</h3>

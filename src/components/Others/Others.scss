@@ -73,6 +73,20 @@
                 cursor: pointer;
               }
             }
+
+            .box.delete {
+              .flex-1 {
+                .avatar {
+                  .icon {
+                    fill: red;
+                  }
+                }
+
+                h3 {
+                  color: red;
+                }
+              }
+            }
           }
         }
       }

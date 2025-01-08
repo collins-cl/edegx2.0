@@ -7,6 +7,7 @@ import Profile from "../../components/Profile/Profile";
 import SecurityTab from "../../components/SecurityTab/SecurityTab";
 import Preference from "../../components/Preferences/Preference";
 import Others from "../../components/Others/Others";
+import Refer from "../../components/Refer/Refer";
 
 const More = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -85,6 +86,9 @@ const Content = ({ option }) => {
 
     case "preference":
       return <Preference />;
+
+    case "refer":
+      return <Refer />;
 
     case "others":
       return <Others />;

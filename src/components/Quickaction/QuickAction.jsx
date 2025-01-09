@@ -1,5 +1,5 @@
 import "../Quickaction/QuickAction.scss";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import {
   MdArrowDownward,
   MdArrowUpward,
@@ -12,6 +12,8 @@ import Carousel from "../Carousel/Carousel";
 import Cryptos from "../Cryptos/Cryptos";
 
 const QuickAction = () => {
+  // const location = useLocation();
+
   return (
     <div className="quickaction">
       <div className="quick-act-title">Quick Action</div>
@@ -24,7 +26,7 @@ const QuickAction = () => {
           <p>Buy Crypto</p>
         </Link>
 
-        <Link to="">
+        <Link to="sell">
           <div className="icon-case">
             <MdArrowOutward className="icon" />
           </div>
@@ -67,6 +69,7 @@ const QuickAction = () => {
       <div className="cryptos-wrapper">
         <Cryptos />
       </div>
+      <Outlet />
     </div>
   );
 };

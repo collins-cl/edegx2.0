@@ -40,6 +40,14 @@
         background-color: #029588;
       }
 
+      &:nth-child(1) {
+        cursor: not-allowed;
+      }
+
+      &:nth-child(3) {
+        cursor: not-allowed;
+      }
+
       &:nth-child(1) .icon-case {
         background-color: rgba(251, 230, 191, 0.579);
 

@@ -1,0 +1,116 @@
+.sell {
+  padding: 1.5em;
+  margin-top: 60px;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+    .tokens,
+    .action {
+      width: 48%;
+      border-radius: 10px;
+      padding: 1.5em;
+      background-color: rgb(243, 243, 243);
+    }
+
+    .tokens {
+      .container {
+        .title {
+          font-size: 23px;
+          font-weight: bold;
+          color: rgb(60, 60, 60);
+        }
+
+        .token {
+          margin-top: 1em;
+          padding: 2em 1.5em;
+          background-color: white;
+
+          .search-tkn {
+            position: relative;
+
+            input {
+              width: 100%;
+              height: 50px;
+              border-radius: 5px;
+              padding: 0 10px 0 20px;
+              border: 2px solid #029588;
+              font-size: 15px;
+              outline: none;
+
+              &::placeholder {
+                font-size: 15px;
+              }
+            }
+          }
+
+          .tokens-list {
+            margin-top: 2em;
+            height: 50vh;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+
+            li {
+              cursor: pointer;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              height: 90px;
+              padding: 0 10px;
+              border-bottom: 2px solid rgba(176, 175, 175, 0.321);
+
+              .tkn {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                .logo {
+                  width: 40px;
+                  height: 40px;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
+
+                .details {
+                  .tkn-name {
+                    font-weight: bold;
+                  }
+
+                  .tkn-sym {
+                    font-size: 15px;
+                  }
+                }
+              }
+
+              .bal {
+                div {
+                  width: 110px;
+                  display: flex;
+                  justify-content: flex-end;
+                  align-items: center;
+                }
+                .tkn-bal {
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .action {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

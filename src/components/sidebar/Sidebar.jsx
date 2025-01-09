@@ -14,7 +14,7 @@ const Sidebar = () => {
 
         <div className="side-tag">
           <div className="side-tag-li">
-            <NavLink to="/">
+            <NavLink to="/overview">
               <IoBriefcaseOutline className="icon" /> <p>Overview</p>
             </NavLink>
             <NavLink to="/wallets">

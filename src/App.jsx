@@ -1,5 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Overview from "./pages/Overview/Overview";
 import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/Topbar/Topbar";
@@ -8,6 +13,7 @@ import Giftcards from "./pages/Giftcards/Giftcards";
 import Transactions from "./pages/Transactions/Transactions";
 import Payments from "./pages/Payments/Payments";
 import More from "./pages/More/More";
+import Sell from "./pages/Sell/Sell";
 
 function App() {
   return (
@@ -17,7 +23,9 @@ function App() {
         <div className="right-pane">
           <Topbar />
           <Routes>
-            <Route path="/" element={<Overview />} />
+            <Route path="/" element={<Navigate to="/overview" replace />} />
+            <Route path="/overview" element={<Overview />} />
+            <Route path="/overview/sell" element={<Sell />} />
             <Route path="/wallets" element={<Wallets />} />
             <Route path="/giftcards" element={<Giftcards />} />
             <Route path="/transactions" element={<Transactions />} />

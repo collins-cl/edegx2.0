@@ -195,7 +195,7 @@
             h3 {
               width: 100%;
               font-size: 14px;
-              height: 100%;
+              height: 99%;
               display: flex;
               align-items: center;
               padding-left: 2em;
@@ -205,6 +205,50 @@
               border-radius: 5px;
               background-color: rgb(233, 233, 233);
             }
+          }
+
+          .rate {
+            margin-top: 2.5em;
+            position: relative;
+
+            .hr-line {
+              width: 100%;
+              height: 1px;
+              background-color: rgb(210, 210, 210);
+            }
+
+            p {
+              width: 140px;
+              height: 30px;
+              border-radius: 50px;
+              position: absolute;
+              right: 35%;
+              top: 0;
+              margin-top: -15px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+              font-size: 14px;
+              background-color: rgb(243, 243, 243);
+              border: 1px solid rgba(194, 194, 194, 0.407);
+            }
+          }
+
+          .balance {
+            margin-top: 3em;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgb(131, 130, 130);
+            float: right;
+          }
+
+          .clear {
+            clear: both;
+          }
+
+          .input-amt {
+            margin-top: 1em;
           }
         }
       }

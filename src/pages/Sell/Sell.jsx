@@ -6,17 +6,12 @@ import BNB from "../../assets/coins/BNB.png";
 import ETH from "../../assets/coins/ETH.png";
 import Positive from "../../assets/positive-graph.svg";
 import { NavLink, useSearchParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 
 const Sell = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [option, setOption] = useState(searchParams.get("option") || "sell");
-
-  //   useEffect(() => {
-  //     const currentOption = searchParams.get("option") || "buy";
-  //     setOption(currentOption);
-  //   }, [searchParams]);
 
   const handleOptionChange = (newOption) => {
     setOption(newOption);
@@ -188,11 +183,13 @@ const Sell = () => {
               </div>
 
               <div className="rate">
-                <div></div>
+                <div className="hr-line"></div>
                 <p>Rate: 1605/$</p>
               </div>
 
               <div className="balance">Balance: 0 BCH</div>
+
+              <div className="clear"></div>
 
               <div className="input-amt">
                 <input type="text" name="" />

@@ -174,36 +174,37 @@ const Sell = () => {
               </NavLink>
             </div>
 
-            <div className="from">
-              <p>From</p>
+            <div className="contents">
+              <div className="from">
+                <p>From</p>
 
-              <h3>BCH Wallet</h3>
-            </div>
+                <h3>BCH Wallet</h3>
+              </div>
 
-            <div className="to">
-              <p>To</p>
+              <div className="to">
+                <p>To</p>
 
-              <h3>Naira Wallet</h3>
-            </div>
+                <h3>Naira Wallet</h3>
+              </div>
 
-            <div className="rate">
-              <div></div>
-              <p>Rate: 1605/$</p>
-            </div>
+              <div className="rate">
+                <div></div>
+                <p>Rate: 1605/$</p>
+              </div>
 
-            <div className="balance">Balance: 0 BCH</div>
+              <div className="balance">Balance: 0 BCH</div>
 
-            <div className="input-amt">
-              <input type="text" name="" />
+              <div className="input-amt">
+                <input type="text" name="" />
 
-              <div className="select-opt">
-                <div className="cur-pair">
-                  <div className="cur">USD</div>
+                <div className="select-opt">
+                  <div className="cur-pair">
+                    <div className="cur">USD</div>
 
-                  <FaAngleDown className="icon" />
-                </div>
+                    <FaAngleDown className="icon" />
+                  </div>
 
-                {/* <div className="options">
+                  {/* <div className="options">
                   <p>Wallet</p>
 
                   <div className="opts">
@@ -211,30 +212,31 @@ const Sell = () => {
                     <p>NGN</p>
                   </div>
                 </div> */}
-              </div>
-            </div>
-
-            <div className="perc-rate">
-              <div className="card">25%</div>
-              <div className="card">25%</div>
-              <div className="card">25%</div>
-              <div className="card">25%</div>
-            </div>
-
-            <div className="coin-amt">
-              <input type="text" name="" />
-
-              <div className="select-opt">
-                <div className="coin-pair">
-                  <div className="cur">BCH</div>
-                  <img src={BCH} alt="" />{" "}
                 </div>
-
-                <FaAngleDown className="icon" />
               </div>
-            </div>
 
-            <div className="cont">Continue</div>
+              <div className="perc-rate">
+                <div className="card">25%</div>
+                <div className="card">25%</div>
+                <div className="card">25%</div>
+                <div className="card">25%</div>
+              </div>
+
+              <div className="coin-amt">
+                <input type="text" name="" />
+
+                <div className="select-opt">
+                  <div className="coin-pair">
+                    <div className="cur">BCH</div>
+                    <img src={BCH} alt="" />{" "}
+                  </div>
+
+                  <FaAngleDown className="icon" />
+                </div>
+              </div>
+
+              <div className="cont">Continue</div>
+            </div>
           </div>
         </div>
       </div>

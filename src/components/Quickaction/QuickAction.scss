@@ -106,3 +106,110 @@
     margin-top: 1.5em;
   }
 }
+
+.deposit-modal {
+  background-color: white;
+  width: 450px;
+  height: 500px;
+  padding: 1em 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+
+  .quit-btn {
+    float: right;
+    cursor: pointer;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    margin-top: 1em;
+    font-size: 14px;
+    max-width: 90%;
+  }
+
+  .dp-method {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    .box {
+      height: 90px;
+      width: 100%;
+      background-color: rgb(236, 236, 236);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 1em;
+      cursor: pointer;
+
+      .img {
+        width: 50px;
+        height: 50px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .currency {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.naira-deposit {
+  background-color: white;
+  width: 450px;
+  height: 200px;
+  padding: 1em 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 19px;
+    cursor: pointer;
+  }
+
+  p {
+    margin-top: 1em;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(107, 107, 107);
+  }
+
+  .add-acct {
+    margin-top: 2em;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #029588;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+  }
+}

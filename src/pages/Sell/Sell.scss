@@ -136,6 +136,10 @@
             border-radius: 5px;
             font-size: 15px;
             color: white;
+
+            &:nth-child(1) {
+              cursor: not-allowed;
+            }
           }
 
           .active-link {
@@ -278,8 +282,54 @@
                 font-size: 15px;
                 border-right: 1px solid rgb(192, 191, 191);
 
+                .cur {
+                  color: rgb(131, 130, 130);
+                }
+
                 .icon {
                   color: rgb(142, 142, 142);
+                }
+              }
+            }
+
+            .options {
+              position: absolute;
+              top: 0;
+              left: 0;
+              margin-top: 3.3em;
+              background-color: white;
+              width: 130px;
+              height: 100px;
+              border-radius: 5px;
+              z-index: 3;
+              padding: 5px;
+
+              .head {
+                font-size: 14px;
+                color: rgb(131, 130, 130);
+              }
+
+              .opts {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                p {
+                  height: 30px;
+                  padding: 0 5px;
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  font-size: 14px;
+                  background-color: rgb(243, 243, 243);
+                  font-weight: bold;
+                  cursor: pointer;
+
+                  input {
+                    border: none;
+                    outline: none;
+                    width: 15px;
+                  }
                 }
               }
             }
@@ -366,5 +416,110 @@
         }
       }
     }
+  }
+}
+
+.sell-modal {
+  background-color: white;
+  width: 500px;
+  height: 550px;
+  padding: 1em 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+
+  .quit-btn {
+    float: right;
+    cursor: pointer;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  .danger-img {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: 1em;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .pop-info {
+    text-align: center;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      margin-top: -5px;
+      font-size: 15px;
+    }
+  }
+
+  .snd {
+    margin-top: 1em;
+    width: 100%;
+    height: 90px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+      color: rgb(116, 116, 116);
+    }
+
+    span {
+      color: black;
+      font-size: 22px;
+      font-weight: bold;
+    }
+  }
+
+  .receive {
+    margin-top: 2em;
+    width: 100%;
+    height: 90px;
+    border-radius: 10px;
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+      color: rgb(116, 116, 116);
+    }
+
+    span {
+      color: #029588;
+      font-size: 22px;
+      font-weight: bold;
+    }
+  }
+
+  .continue {
+    margin-top: 2em;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #029588;
   }
 }

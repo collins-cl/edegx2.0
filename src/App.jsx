@@ -14,6 +14,7 @@ import Transactions from "./pages/Transactions/Transactions";
 import Payments from "./pages/Payments/Payments";
 import More from "./pages/More/More";
 import Sell from "./pages/Sell/Sell";
+import WalletToken from "./pages/WalletToken/WalletToken";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/overview" element={<Overview />} />
             <Route path="/overview/sell" element={<Sell />} />
             <Route path="/wallets" element={<Wallets />} />
+            <Route path="/wallets/token" element={<WalletToken />} />
             <Route path="/giftcards" element={<Giftcards />} />
             <Route path="/transactions" element={<Transactions />} />
             <Route path="/payments" element={<Payments />} />

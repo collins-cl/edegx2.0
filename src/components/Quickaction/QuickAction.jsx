@@ -140,7 +140,7 @@ const QuickAction = () => {
           onClose={() => setWithdrawModal(false)}
           sx={{ background: "rgba(114, 113, 113, 0.58)" }}
         >
-          <div className="deposit-modal">
+          <div className="withdraw-modal">
             <div className="quit-btn" onClick={() => setWithdrawModal(false)}>
               <LiaTimesSolid />
             </div>
@@ -230,10 +230,7 @@ const WithdrawModal = ({ setOpenWithdraw, openwithdraw }) => {
             <LiaTimesSolid className="icon" />
           </div>
         </div>
-        <p>
-          Kindly select the bank that you would made your deposit from to your
-          Jagaban account.
-        </p>
+        <p>Kindly select the bank that you would make your Withdrawal to.</p>
 
         <div
           className="add-acct"

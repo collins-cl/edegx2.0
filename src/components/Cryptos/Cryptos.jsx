@@ -5,6 +5,7 @@ import BNB from "../../assets/coins/BNB.png";
 import ETH from "../../assets/coins/ETH.png";
 import Positive from "../../assets/positive-graph.svg";
 import { GoArrowUp } from "react-icons/go";
+import { useNavigate } from "react-router-dom";
 
 const Cryptos = () => {
   const tokenInfo = [
@@ -74,6 +75,8 @@ const Cryptos = () => {
     },
   ];
 
+  const navigate = useNavigate();
+
   return (
     <div className="cryptos">
       <div className="title">All Cryptos</div>
@@ -107,7 +110,10 @@ const Cryptos = () => {
                   <img src={item.chartType} alt="" />
                 </div>
 
-                <div className="trade">
+                <div
+                  className="trade"
+                  onClick={() => navigate("/wallets/token")}
+                >
                   <div className="btn">trade</div>
                 </div>
               </div>

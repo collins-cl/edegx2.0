@@ -1,9 +1,14 @@
-import { LiaAngleDownSolid } from "react-icons/lia";
+import { LiaAngleDownSolid, LiaTimesSolid } from "react-icons/lia";
 import "../WalletToken/WalletToken.scss";
 import { BsArrowDownLeft, BsArrowUpRight } from "react-icons/bs";
 import Banner from "../../assets/transaction-empty.svg";
+import { Modal } from "@mui/material";
+import { useState } from "react";
+import QR from "../../assets/qr-code.png";
 
 const WalletToken = () => {
+  const [trademodal, setTradeModal] = useState(false);
+
   return (
     <div className="wallet-token">
       <div className="wallet-wrapper">
@@ -26,7 +31,7 @@ const WalletToken = () => {
           </div>
 
           <div className="box-2">
-            <div className="receive">
+            <div className="receive" onClick={() => setTradeModal(true)}>
               <BsArrowDownLeft className="icon" />
 
               <p>Receive</p>
@@ -51,11 +56,47 @@ const WalletToken = () => {
               Enter the realm of fast Cryptocurrency transactions and amazing
               rates
             </p>
-          </div>
 
-          <div className="start">Start trading</div>
+            <div className="start" onClick={() => setTradeModal(true)}>
+              Start trading
+            </div>
+          </div>
         </div>
       </div>
+
+      <>
+        <Modal
+          disableAutoFocus
+          open={trademodal}
+          onClose={() => setTradeModal(false)}
+          sx={{ background: "rgba(114, 113, 113, 0.58)" }}
+        >
+          <div className="trade-modal">
+            <div className="quit-btn" onClick={() => setTradeModal(false)}>
+              <LiaTimesSolid />
+            </div>
+
+            <div className="clear"></div>
+
+            <h3>Receive BCH</h3>
+
+            <p>
+              You can scan your QR Code or share your wallet address directly
+              from here to your sender
+            </p>
+
+            <div className="qr-code">
+              <img src={QR} alt="" />
+            </div>
+
+            <div className="addy">
+              bitcoincash:qp6rezzseleg72rt3vpk8zkca7fq9j75hszpzhhefm
+            </div>
+
+            <div className="copy">Copy Address</div>
+          </div>
+        </Modal>
+      </>
     </div>
   );
 };

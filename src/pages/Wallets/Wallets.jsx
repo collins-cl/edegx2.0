@@ -90,7 +90,7 @@ const Wallets = () => {
               <div className="tokens">
                 {tokenInfo &&
                   tokenInfo.map((item, id) => (
-                    <Link key={id}>
+                    <Link key={id} to="/wallets/token">
                       <div className="token">
                         <div className="wrap">
                           <img src={item.image} alt="" />
@@ -121,7 +121,7 @@ const Wallets = () => {
                 <p> &#8358; 200,000</p>
 
                 <div className="view-bal">
-                  <FaEye className="icon"/>
+                  <FaEye className="icon" />
                 </div>
               </div>
             </div>

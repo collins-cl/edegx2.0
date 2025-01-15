@@ -1,10 +1,7 @@
 import { LiaAngleDownSolid } from "react-icons/lia";
 import "../WalletToken/WalletToken.scss";
-import {
-  BsArrowDownLeft,
-  BsArrowDownRight,
-  BsArrowUpRight,
-} from "react-icons/bs";
+import { BsArrowDownLeft, BsArrowUpRight } from "react-icons/bs";
+import Banner from "../../assets/transaction-empty.svg";
 
 const WalletToken = () => {
   return (
@@ -46,7 +43,9 @@ const WalletToken = () => {
           <div className="title">Recent Transaction</div>
 
           <div className="transact-container">
-            <img src="" alt="" />
+            <div className="img-container">
+              <img src={Banner} alt="" />
+            </div>
 
             <p>
               Enter the realm of fast Cryptocurrency transactions and amazing

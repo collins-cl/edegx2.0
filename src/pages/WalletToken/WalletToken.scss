@@ -115,5 +115,27 @@
         }
       }
     }
+
+    .bottom {
+      margin-top: 2em;
+
+      .title {
+        font-weight: 600;
+      }
+
+      .transact-container {
+        width: 100%;
+        height: 35vh;
+        margin-top: 1em;
+        border-radius: 15px;
+        background-color: rgb(244, 244, 244);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .img-container {
+        }
+      }
+    }
   }
 }

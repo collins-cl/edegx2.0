@@ -16,7 +16,7 @@ const Giftcards = () => {
 
         <div className="call-to-action">
           <div className="cta-container">
-            <Link to="">
+            <Link to="/giftcards/buy">
               <div className="box">
                 <img src={Buy} alt="" />
                 <p>Buy Gift Card</p>

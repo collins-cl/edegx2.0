@@ -1,0 +1,45 @@
+.ongoing-sell {
+  padding: 1.5em;
+  margin-top: 60px;
+
+  .wrapper {
+    margin-top: 1em;
+
+    .title {
+      width: fit-content;
+      font-size: 15px;
+      text-align: center;
+      font-weight: bold;
+      color: black;
+      border-bottom: 2px solid #029588;
+    }
+
+    .fiat-contents {
+      margin-top: 2em;
+      width: 100%;
+      height: 40vh;
+      border-radius: 10px;
+      background-color: rgb(240, 240, 240);
+
+      .fc-wrapper {
+        padding: 1em;
+
+        .fc-title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 80%;
+          margin-top: 5px;
+          font-weight: bold;
+          color: black;
+
+          li {
+            width: 150px;
+            // background-color: red;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

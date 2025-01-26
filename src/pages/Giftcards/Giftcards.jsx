@@ -22,19 +22,19 @@ const Giftcards = () => {
                 <p>Buy Gift Card</p>
               </div>
             </Link>
-            <Link to="/giftcards/buy">
+            <Link to="/giftcards/sell">
               <div className="box">
                 <img src={Sell} alt="" />
                 <p>Sell Gift Card</p>
               </div>
             </Link>
-            <Link to="">
+            <Link to="/giftcards/sell/ongoing">
               <div className="box">
                 <img src={Ongoing} alt="" />
                 <p>Ongoing Gift Card</p>
               </div>
             </Link>
-            <Link to="">
+            <Link to="/giftcards/sell/closed">
               <div className="box">
                 <img src={Closed} alt="" />
                 <p>Closed Gift Card</p>

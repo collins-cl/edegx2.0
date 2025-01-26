@@ -17,6 +17,8 @@ import Sell from "./pages/Sell/Sell";
 import WalletToken from "./pages/WalletToken/WalletToken";
 import Buycards from "./pages/Giftcards/BuyCards/Buycards";
 import Sellgiftcards from "./pages/Giftcards/SellCards/Sellgiftcards";
+import OngoingSell from "./pages/Giftcards/OngoingSell/OngoingSell";
+import ClosedSell from "./pages/Giftcards/ClosedSell/ClosedSell";
 
 function App() {
   return (
@@ -27,15 +29,27 @@ function App() {
           <Topbar />
           <Routes>
             <Route path="/" element={<Navigate to="/overview" replace />} />
+
             <Route path="/overview" element={<Overview />} />
+
             <Route path="/overview/sell" element={<Sell />} />
+
             <Route path="/wallets" element={<Wallets />} />
+
             <Route path="/wallets/token" element={<WalletToken />} />
+
             <Route path="/giftcards" element={<Giftcards />} />
             <Route path="/giftcards/buy" element={<Buycards />} />
+
             <Route path="/giftcards/sell" element={<Sellgiftcards />} />
+
+            <Route path="/giftcards/sell/ongoing" element={<OngoingSell />} />
+
+            <Route path="/giftcards/sell/closed" element={<ClosedSell />} />
+
             <Route path="/transactions" element={<Transactions />} />
             <Route path="/payments" element={<Payments />} />
+
             <Route path="/more" element={<More />} />
           </Routes>
         </div>

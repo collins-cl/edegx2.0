@@ -22,7 +22,7 @@ const Giftcards = () => {
                 <p>Buy Gift Card</p>
               </div>
             </Link>
-            <Link to="">
+            <Link to="/giftcards/buy">
               <div className="box">
                 <img src={Sell} alt="" />
                 <p>Sell Gift Card</p>

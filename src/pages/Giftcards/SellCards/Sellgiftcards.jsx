@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "../BuyCards/Buycards.scss";
+import "../SellCards/Sellgiftcards.scss";
 import Card from "../../../assets/giftcard/449.png";
 import Empty from "../../../assets/empty.svg";
 import Uk from "../../../assets/countries/uk.png";
@@ -9,21 +9,21 @@ import { FaAngleDown } from "react-icons/fa6";
 import { LiaTimesSolid } from "react-icons/lia";
 import { Modal } from "@mui/material";
 
-const Buycards = () => {
+const Sellgiftcards = () => {
   const [Currency, setCurrency] = useState("NGN");
   const [opensetcurrency, setOpenSetCurrency] = useState(false);
-  const [buycardsmodal, setBuyCardsModal] = useState(false);
+  const [sellcardsmodal, setSellCardsModal] = useState(false);
   const [isEmpty, setIsEmpty] = useState(false);
 
   const closemodal = () => {
-    setBuyCardsModal(false);
+    setSellCardsModal(false);
   };
 
   return (
-    <div className="buycards">
+    <div className="sellgiftcards">
       <div className="wrapper">
         <div className="section-1">
-          <div className="title">Buy Gift Card</div>
+          <div className="title">Sell Gift Card</div>
 
           <div className="c-wallets-wrapper">
             <div className="tokens">
@@ -302,13 +302,13 @@ const Buycards = () => {
 
                 <div
                   className="start-trade"
-                  onClick={() => setBuyCardsModal(true)}
+                  onClick={() => setSellCardsModal(true)}
                 >
                   Start Trade
                 </div>
 
                 <BuyModalContent
-                  buycardsmodal={buycardsmodal}
+                  sellcard={sellcardsmodal}
                   closemodal={closemodal}
                 />
               </div>
@@ -320,16 +320,16 @@ const Buycards = () => {
   );
 };
 
-const BuyModalContent = ({ buycardsmodal, closemodal }) => {
+const BuyModalContent = ({ sellcard, closemodal }) => {
   return (
     <div>
       <Modal
         disableAutoFocus
-        open={buycardsmodal}
+        open={sellcard}
         onClose={closemodal}
         sx={{ background: "rgba(114, 113, 113, 0.58)" }}
       >
-        <div className="buycards-container">
+        <div className="sellcard-container">
           <div className="quit-btn" onClick={closemodal}>
             <LiaTimesSolid />
           </div>
@@ -359,4 +359,4 @@ const BuyModalContent = ({ buycardsmodal, closemodal }) => {
   );
 };
 
-export default Buycards;
+export default Sellgiftcards;

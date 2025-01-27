@@ -19,6 +19,7 @@ import Buycards from "./pages/Giftcards/BuyCards/Buycards";
 import Sellgiftcards from "./pages/Giftcards/SellCards/Sellgiftcards";
 import OngoingSell from "./pages/Giftcards/OngoingSell/OngoingSell";
 import ClosedSell from "./pages/Giftcards/ClosedSell/ClosedSell";
+import Airtime from "./pages/Payments/Airtime/Airtime";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
 
             <Route path="/transactions" element={<Transactions />} />
             <Route path="/payments" element={<Payments />} />
+            <Route path="/payments/airtime" element={<Airtime />} />
 
             <Route path="/more" element={<More />} />
           </Routes>

@@ -1,4 +1,4 @@
-.airtime {
+.dstv {
   padding: 1.5em;
   margin-top: 60px;
 
@@ -24,7 +24,7 @@
     }
 
     .container {
-      height: 400px;
+      height: fit-content;
       overflow-y: scroll;
       margin-top: 1em;
       padding: 2em 3em;
@@ -112,9 +112,8 @@
         justify-content: center;
         align-items: center;
         border-radius: 10px;
-        margin-top: 5px;
         cursor: pointer;
-        height: 60px;
+        height: 50px;
       }
     }
   }

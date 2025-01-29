@@ -1,16 +1,16 @@
 import { FaAngleDown, FaAngleLeft } from "react-icons/fa6";
-import "../Airtime/Airtime.scss";
+import "../Data/Data.scss";
 
-const Airtime = () => {
+const Data = () => {
   return (
-    <div className="airtime">
+    <div className="data">
       <div className="wrapper">
         <div className="title">
           <div className="back">
             <FaAngleLeft className="title-icon" />
           </div>
 
-          <div className="func">Buy Airtime</div>
+          <div className="func">Buy Data</div>
         </div>
 
         <div className="container">
@@ -43,11 +43,11 @@ const Airtime = () => {
             </div>
           </div>
 
-          <div className="buy-btn">Buy Airtime</div>
+          <div className="buy-btn">Buy Data</div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Airtime;
+export default Data;

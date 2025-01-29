@@ -3,7 +3,7 @@ import { MdVerified } from "react-icons/md";
 import "../Preferences/Preference.scss";
 // import { useState } from "react";
 // import { Modal } from "@mui/material";
-import { FaAngleRight } from "react-icons/fa6";
+import { FaAngleRight, FaPlus, FaRegTrashCan } from "react-icons/fa6";
 import { CiBadgeDollar } from "react-icons/ci";
 import { TbCards } from "react-icons/tb";
 import { useState } from "react";
@@ -16,6 +16,11 @@ const Preference = () => {
   const [verification, setVerification] = useState(false);
   const [selectaccount, setSelectAccount] = useState(false);
   const [addaccount, setAddAccount] = useState(false);
+
+  const [currency, setCurrency] = useState(false);
+  const [selectcurrency, setSelectCurrency] = useState("NGN");
+
+  const [accounts, setAccounts] = useState(false);
 
   return (
     <div className="preference">
@@ -55,9 +60,16 @@ const Preference = () => {
                     </div>
                   </div>
 
-                  <div className="flex-2">
+                  <div className="flex-2" onClick={() => setCurrency(true)}>
                     <FaAngleRight className="icon" />
                   </div>
+
+                  <CurrencyModal
+                    currency={currency}
+                    setCurrency={setCurrency}
+                    selectcurrency={selectcurrency}
+                    setSelectCurrency={setSelectCurrency}
+                  />
                 </div>
 
                 <div className="box">
@@ -72,7 +84,7 @@ const Preference = () => {
                     </div>
                   </div>
 
-                  <div className="flex-2">
+                  <div className="flex-2" onClick={() => setAccounts(true)}>
                     <FaAngleRight className="icon" />
                   </div>
                 </div>
@@ -120,6 +132,54 @@ const Preference = () => {
 
             <div className="done" onClick={() => setVerification(false)}>
               Done
+            </div>
+
+            {/* Child Modal */}
+            <BVNMODAL
+              selectaccount={selectaccount}
+              setSelectAccount={setSelectAccount}
+            />
+
+            <AccountModal
+              addaccount={addaccount}
+              setAddAccount={setAddAccount}
+            />
+          </div>
+        </Modal>
+      </div>
+
+      <div className="modal">
+        <Modal
+          disableAutoFocus
+          open={accounts}
+          onClose={() => setAccounts(false)}
+          sx={{ background: "rgba(114, 113, 113, 0.58)" }}
+        >
+          <div className="accounts-modal">
+            <div className="quit-btn" onClick={() => setAccounts(false)}>
+              <LiaTimesSolid />
+            </div>
+
+            <h3>Accounts</h3>
+            <p>
+              You can set a withdrawal account that you can automatically
+              withdraw to
+            </p>
+
+            <div className="acct">
+              <input type="text" placeholder="Search bank accounts" />
+            </div>
+
+            <div className="btns">
+              <div className="add" onClick={() => setAddAccount(true)}>
+                <FaPlus className="icon" />
+                Add Accounts
+              </div>
+
+              <div className="add delete">
+                <FaRegTrashCan className="icon" />
+                Delete Accounts
+              </div>
             </div>
 
             {/* Child Modal */}
@@ -222,6 +282,52 @@ const AccountModal = ({ addaccount, setAddAccount }) => {
         </div>
 
         <div className="done" onClick={() => setAddAccount(false)}>
+          Done
+        </div>
+      </div>
+    </Modal>
+  );
+};
+
+const CurrencyModal = ({
+  currency,
+  setCurrency,
+  setSelectCurrency,
+  selectcurrency,
+}) => {
+  return (
+    <Modal
+      disableAutoFocus
+      open={currency}
+      onClose={() => setCurrency(false)}
+      sx={{ background: "rgba(0, 0, 0, 0.5)" }}
+    >
+      <div className="currency-pop">
+        <div className="title">
+          <h3>Currency</h3>
+
+          <div className="quit-btn" onClick={() => setCurrency(false)}>
+            <LiaTimesSolid className="icon" />
+          </div>
+        </div>
+
+        <p>Change your default currency from NGN to another fiat currency</p>
+
+        <div className="forms" onClick={(e) => e.stopPropagation()}>
+          <div className="radio" onClick={() => setSelectCurrency("NGN")}>
+            <input type="radio" name="" checked={selectcurrency === "NGN"} />
+
+            <p>NGN</p>
+          </div>
+
+          <div className="radio" onClick={() => setSelectCurrency("USD")}>
+            <input type="radio" name="" checked={selectcurrency === "USD"} />
+
+            <p>USD</p>
+          </div>
+        </div>
+
+        <div className="done" onClick={() => setCurrency(false)}>
           Done
         </div>
       </div>

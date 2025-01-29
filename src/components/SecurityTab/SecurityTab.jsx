@@ -13,6 +13,7 @@ const SecurityTab = () => {
   // const handleClose = () => setOpen(false);
 
   const [changepin, setChangePin] = useState(false);
+  const [changepassword, setChangePassword] = useState(false);
 
   return (
     <div className="security">
@@ -57,9 +58,17 @@ const SecurityTab = () => {
                     </div>
                   </div>
 
-                  <div className="flex-2">
+                  <div
+                    className="flex-2"
+                    onClick={() => setChangePassword(true)}
+                  >
                     <FaAngleRight className="icon" />
                   </div>
+
+                  <ChangePassword
+                    changepassword={changepassword}
+                    setChangePassword={setChangePassword}
+                  />
                 </div>
 
                 <div className="box">
@@ -95,17 +104,103 @@ const ChangePin = ({ setChangePin, changepin }) => {
       onClose={() => setChangePin(false)}
       sx={{ background: "rgba(0, 0, 0, 0.5)" }}
     >
-      <div className="naira-deposit">
+      <div className="change-pin">
         <div className="title">
-          <div className="head">Select Bank</div>
+          <div className="head">Change Pin</div>
 
           <div className="quit-btn" onClick={() => setChangePin(false)}>
             <LiaTimesSolid className="icon" />
           </div>
         </div>
-        <p>Kindly select the bank that you would make your Withdrawal to.</p>
+        <p>
+          Enter your old pin to create a new password. This is your login
+          credentials.
+        </p>
 
-        <div className="add-acct">Add Account</div>
+        <div className="content">
+          <div className="old-pin">
+            <h3>Old Pin</h3>
+            <p>Input your old pin</p>
+
+            <div className="pin-card">
+              <input type="text" name="" placeholder="°" maxLength={1} />
+              <input type="text" name="" placeholder="°" maxLength={1} />
+              <input type="text" name="" placeholder="°" maxLength={1} />
+              <input type="text" name="" placeholder="°" maxLength={1} />
+            </div>
+          </div>
+
+          <div className="forgot">
+            <p>forgot pin?</p>
+
+            <div className="clear"></div>
+          </div>
+
+          <div className="old-pin">
+            <h3>New Pin</h3>
+            <p>Input your new pin</p>
+
+            <div className="pin-card">
+              <input type="text" name="" placeholder="°" maxLength={1} />
+              <input type="text" name="" placeholder="°" maxLength={1} />
+              <input type="text" name="" placeholder="°" maxLength={1} />
+              <input type="text" name="" placeholder="°" maxLength={1} />
+            </div>
+          </div>
+
+          <div className="change" onClick={() => setChangePin(false)}>
+            Change Pin
+          </div>
+        </div>
+      </div>
+    </Modal>
+  );
+};
+
+const ChangePassword = ({ setChangePassword, changepassword }) => {
+  return (
+    <Modal
+      disableAutoFocus
+      open={changepassword}
+      onClose={() => setChangePassword(false)}
+      sx={{ background: "rgba(0, 0, 0, 0.5)" }}
+    >
+      <div className="change-pin">
+        <div className="title">
+          <div className="head">Change Pin</div>
+
+          <div className="quit-btn" onClick={() => setChangePassword(false)}>
+            <LiaTimesSolid className="icon" />
+          </div>
+        </div>
+        <p>
+          Enter your old pin to create a new password. This is your login
+          credentials.
+        </p>
+
+        <div className="content">
+          <div className="old-password">
+            <p>Old Password</p>
+
+            <input type="text" name="" placeholder="Enter your password" />
+          </div>
+
+          <div className="forgot">
+            <p>forgot pin?</p>
+
+            <div className="clear"></div>
+          </div>
+
+          <div className="old-password">
+            <p>New Password</p>
+
+            <input type="text" name="" placeholder="Enter your password" />
+          </div>
+
+          <div className="change" onClick={() => setChangePassword(false)}>
+            Change Password
+          </div>
+        </div>
       </div>
     </Modal>
   );

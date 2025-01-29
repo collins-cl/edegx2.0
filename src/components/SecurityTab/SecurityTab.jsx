@@ -1,14 +1,18 @@
-// import { useState } from "react";
+/* eslint-disable react/prop-types */
 import { IoMdLock } from "react-icons/io";
 import "./SecurityTab.scss";
-// import { Modal } from "@mui/material";
 import { FaAngleRight, FaUser } from "react-icons/fa6";
 import { TbAuth2Fa } from "react-icons/tb";
+import { Modal } from "@mui/material";
+import { useState } from "react";
+import { LiaTimesSolid } from "react-icons/lia";
 
 const SecurityTab = () => {
   // const [open, setOpen] = useState(false);
   // const handleOpen = () => setOpen(true);
   // const handleClose = () => setOpen(false);
+
+  const [changepin, setChangePin] = useState(false);
 
   return (
     <div className="security">
@@ -31,9 +35,14 @@ const SecurityTab = () => {
                     </div>
                   </div>
 
-                  <div className="flex-2">
+                  <div className="flex-2" onClick={() => setChangePin(true)}>
                     <FaAngleRight className="icon" />
                   </div>
+
+                  <ChangePin
+                    changepin={changepin}
+                    setChangePin={setChangePin}
+                  />
                 </div>
 
                 <div className="box">
@@ -75,6 +84,30 @@ const SecurityTab = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+const ChangePin = ({ setChangePin, changepin }) => {
+  return (
+    <Modal
+      disableAutoFocus
+      open={changepin}
+      onClose={() => setChangePin(false)}
+      sx={{ background: "rgba(0, 0, 0, 0.5)" }}
+    >
+      <div className="naira-deposit">
+        <div className="title">
+          <div className="head">Select Bank</div>
+
+          <div className="quit-btn" onClick={() => setChangePin(false)}>
+            <LiaTimesSolid className="icon" />
+          </div>
+        </div>
+        <p>Kindly select the bank that you would make your Withdrawal to.</p>
+
+        <div className="add-acct">Add Account</div>
+      </div>
+    </Modal>
   );
 };
 

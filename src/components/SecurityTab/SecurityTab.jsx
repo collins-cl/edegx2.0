@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { IoMdLock } from "react-icons/io";
 import "./SecurityTab.scss";
-import { FaAngleRight, FaUser } from "react-icons/fa6";
+import { FaAngleRight, FaCopy, FaUser } from "react-icons/fa6";
 import { TbAuth2Fa } from "react-icons/tb";
 import { Modal } from "@mui/material";
 import { useState } from "react";
@@ -14,6 +14,7 @@ const SecurityTab = () => {
 
   const [changepin, setChangePin] = useState(false);
   const [changepassword, setChangePassword] = useState(false);
+  const [twofactorauth, setTwoFactorAuth] = useState(false);
 
   return (
     <div className="security">
@@ -83,9 +84,17 @@ const SecurityTab = () => {
                     </div>
                   </div>
 
-                  <div className="flex-2">
+                  <div
+                    className="flex-2"
+                    onClick={() => setTwoFactorAuth(true)}
+                  >
                     <FaAngleRight className="icon" />
                   </div>
+
+                  <TwoFactorAuth
+                    twofactorauth={twofactorauth}
+                    setTwoFactorAuth={setTwoFactorAuth}
+                  />
                 </div>
               </div>
             </div>
@@ -165,7 +174,7 @@ const ChangePassword = ({ setChangePassword, changepassword }) => {
       onClose={() => setChangePassword(false)}
       sx={{ background: "rgba(0, 0, 0, 0.5)" }}
     >
-      <div className="change-pin">
+      <div className="change-password">
         <div className="title">
           <div className="head">Change Pin</div>
 
@@ -199,6 +208,63 @@ const ChangePassword = ({ setChangePassword, changepassword }) => {
 
           <div className="change" onClick={() => setChangePassword(false)}>
             Change Password
+          </div>
+        </div>
+      </div>
+    </Modal>
+  );
+};
+
+const TwoFactorAuth = ({ twofactorauth, setTwoFactorAuth }) => {
+  return (
+    <Modal
+      disableAutoFocus
+      open={twofactorauth}
+      onClose={() => setTwoFactorAuth(false)}
+      sx={{ background: "rgba(0, 0, 0, 0.5)" }}
+    >
+      <div className="twofactorauth">
+        <div className="title">
+          <div className="head">Authenticator Credential</div>
+
+          <div className="quit-btn" onClick={() => setTwoFactorAuth(false)}>
+            <LiaTimesSolid className="icon" />
+          </div>
+        </div>
+        <p>
+          For Top-notch security, setup Google 2FA on your Furex account to keep
+          your funds safe.
+        </p>
+
+        <div className="content">
+          <div className="secret-key">
+            <div className="key">
+              <p>Secret key</p>
+
+              <h2>H2YHTAU67BSF</h2>
+            </div>
+
+            <div className="copy">
+              <FaCopy />
+            </div>
+          </div>
+
+          <div className="steps">
+            <div className="title">Steps for Setup</div>
+            <p>
+              Copy your secret code and save it to a safe place Download and
+              Open <span>Google Authenticator</span> app <br /> Click on
+              <span>Add</span> icon <br /> Enter Jagaban as Account name <br />{" "}
+              Tap “Enter a setup key” and enter your <span>secret code</span>{" "}
+              <br /> Copy and Paste the above secret key in “Your Key <br /> Tap
+              “Add”
+              <br /> Click on
+              <span>Proceed</span>
+            </p>
+          </div>
+
+          <div className="nxt" onClick={() => setTwoFactorAuth(false)}>
+            Proceed
           </div>
         </div>
       </div>

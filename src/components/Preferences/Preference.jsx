@@ -31,7 +31,7 @@ const Preference = () => {
 
             <div className="security-container">
               <div className="card-1">
-                <div className="box">
+                <div className="box" onClick={() => setVerification(true)}>
                   <div className="flex-1">
                     <div className="avatar">
                       <MdVerified className="icon" />
@@ -43,13 +43,13 @@ const Preference = () => {
                     </div>
                   </div>
 
-                  <div className="flex-2" onClick={() => setVerification(true)}>
+                  <div className="flex-2">
                     <FaAngleRight className="icon" />
                   </div>
                 </div>
 
                 <div className="box">
-                  <div className="flex-1">
+                  <div className="flex-1" onClick={() => setCurrency(true)}>
                     <div className="avatar">
                       <CiBadgeDollar className="icon" />
                     </div>
@@ -60,7 +60,7 @@ const Preference = () => {
                     </div>
                   </div>
 
-                  <div className="flex-2" onClick={() => setCurrency(true)}>
+                  <div className="flex-2">
                     <FaAngleRight className="icon" />
                   </div>
 
@@ -72,7 +72,7 @@ const Preference = () => {
                   />
                 </div>
 
-                <div className="box">
+                <div className="box" onClick={() => setAccounts(true)}>
                   <div className="flex-1">
                     <div className="avatar">
                       <TbCards className="icon" />
@@ -84,7 +84,7 @@ const Preference = () => {
                     </div>
                   </div>
 
-                  <div className="flex-2" onClick={() => setAccounts(true)}>
+                  <div className="flex-2">
                     <FaAngleRight className="icon" />
                   </div>
                 </div>

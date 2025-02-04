@@ -21,6 +21,8 @@ const Others = () => {
   const [support, setSupport] = useState(false);
   const [faq, setFaq] = useState(false);
   const [about, setAbout] = useState(false);
+  const [logout, setLogOut] = useState(false);
+  const [reset, setDelete] = useState(false);
 
   return (
     <div className="others">
@@ -31,7 +33,7 @@ const Others = () => {
 
             <div className="security-container">
               <div className="card-1">
-                <div className="box">
+                <div className="box" onClick={() => setSupport(true)}>
                   <div className="flex-1">
                     <div className="avatar">
                       <MdSupportAgent className="icon" />
@@ -43,7 +45,7 @@ const Others = () => {
                     </div>
                   </div>
 
-                  <div className="flex-2" onClick={() => setSupport(true)}>
+                  <div className="flex-2">
                     <FaAngleRight className="icon" />
                   </div>
                 </div>
@@ -65,7 +67,7 @@ const Others = () => {
                   </div>
                 </div>
 
-                <div className="box">
+                <div className="box" onClick={() => setLogOut(true)}>
                   <div className="flex-1">
                     <div className="avatar">
                       <HiOutlineArrowRight className="icon" />
@@ -82,7 +84,7 @@ const Others = () => {
                   </div>
                 </div>
 
-                <div className="box delete">
+                <div className="box delete" onClick={() => setDelete(true)}>
                   <div className="flex-1">
                     <div className="avatar">
                       <FaTrash className="icon" />
@@ -183,6 +185,62 @@ const Others = () => {
               <div className="copy">(c) Jagaban Technologies 2025</div>
             </div>
             <div className="section empty-img"></div>
+          </div>
+        </Modal>
+      </div>
+
+      <div className="modal">
+        <Modal
+          disableAutoFocus
+          open={logout}
+          onClose={() => setLogOut(false)}
+          sx={{ background: "rgba(114, 113, 113, 0.58)" }}
+        >
+          <div className="logout-modal">
+            <div className="quit-btn" onClick={() => setLogOut(false)}>
+              <LiaTimesSolid className="icon" />
+            </div>
+
+            <div className="title">Log Out</div>
+
+            <p>Are you sure you want to log out of your Jagaban account?</p>
+
+            <div className="actions">
+              <div className="yes">Yes, Logout</div>
+              <div className="yes cancel" onClick={() => setLogOut(false)}>
+                Cancel
+              </div>
+            </div>
+          </div>
+        </Modal>
+      </div>
+
+      <div className="modal">
+        <Modal
+          disableAutoFocus
+          open={reset}
+          onClose={() => setDelete(false)}
+          sx={{ background: "rgba(114, 113, 113, 0.58)" }}
+        >
+          <div className="logout-modal">
+            <div className="quit-btn" onClick={() => setDelete(false)}>
+              <LiaTimesSolid className="icon" />
+            </div>
+
+            <div className="title">Delete Jagaban Account</div>
+
+            <p>
+              Your account will be permanently deleted in 30days. Please ensure
+              your wallets are emptied and savings plans stopped before then.
+              Your account will be accessible within the 30 days period.
+            </p>
+
+            <div className="actions">
+              <div className="yes">Yes, Delete</div>
+              <div className="yes cancel" onClick={() => setDelete(false)}>
+                Cancel
+              </div>
+            </div>
           </div>
         </Modal>
       </div>

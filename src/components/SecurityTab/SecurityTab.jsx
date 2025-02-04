@@ -26,7 +26,7 @@ const SecurityTab = () => {
             <div className="security-container">
               <div className="card-1">
                 <div className="box">
-                  <div className="flex-1">
+                  <div className="flex-1" onClick={() => setChangePin(true)}>
                     <div className="avatar">
                       <FaUser className="icon" />
                     </div>
@@ -37,7 +37,7 @@ const SecurityTab = () => {
                     </div>
                   </div>
 
-                  <div className="flex-2" onClick={() => setChangePin(true)}>
+                  <div className="flex-2">
                     <FaAngleRight className="icon" />
                   </div>
 
@@ -48,7 +48,10 @@ const SecurityTab = () => {
                 </div>
 
                 <div className="box">
-                  <div className="flex-1">
+                  <div
+                    className="flex-1"
+                    onClick={() => setChangePassword(true)}
+                  >
                     <div className="avatar">
                       <IoMdLock className="icon" />
                     </div>
@@ -59,10 +62,7 @@ const SecurityTab = () => {
                     </div>
                   </div>
 
-                  <div
-                    className="flex-2"
-                    onClick={() => setChangePassword(true)}
-                  >
+                  <div className="flex-2">
                     <FaAngleRight className="icon" />
                   </div>
 
@@ -73,7 +73,10 @@ const SecurityTab = () => {
                 </div>
 
                 <div className="box">
-                  <div className="flex-1">
+                  <div
+                    className="flex-1"
+                    onClick={() => setTwoFactorAuth(true)}
+                  >
                     <div className="avatar">
                       <TbAuth2Fa className="icon" />
                     </div>
@@ -84,10 +87,7 @@ const SecurityTab = () => {
                     </div>
                   </div>
 
-                  <div
-                    className="flex-2"
-                    onClick={() => setTwoFactorAuth(true)}
-                  >
+                  <div className="flex-2">
                     <FaAngleRight className="icon" />
                   </div>
 

@@ -29,13 +29,17 @@
           margin-top: 0;
           .card-1 {
             padding: 1em;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
 
             .box {
               display: flex;
               align-items: center;
               justify-content: space-between;
               border-bottom: 2px solid rgba(223, 223, 223, 0.621);
-              height: 120px;
+              height: 110px;
+              cursor: pointer;
 
               .flex-1 {
                 display: flex;
@@ -254,6 +258,69 @@
 
     .copy {
       margin-top: 2em;
+    }
+  }
+}
+
+.logout-modal {
+  background-color: white;
+  width: 480px;
+  height: fit-content;
+  padding: 1em 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+
+  .quit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .icon {
+      cursor: pointer;
+    }
+  }
+
+  .title {
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+  }
+
+  p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(131, 130, 130);
+    max-width: 70%;
+    margin: auto;
+    margin-top: 1.5em;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 2.5em;
+
+    .yes {
+      width: 270px;
+      height: 50px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      background-color: #029588;
+      cursor: pointer;
+    }
+
+    .cancel {
+      color: black;
+      background-color: rgb(241, 241, 241);
     }
   }
 }

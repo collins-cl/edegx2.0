@@ -20,6 +20,7 @@ import {
 const Others = () => {
   const [support, setSupport] = useState(false);
   const [faq, setFaq] = useState(false);
+  const [about, setAbout] = useState(false);
 
   return (
     <div className="others">
@@ -47,7 +48,7 @@ const Others = () => {
                   </div>
                 </div>
 
-                <div className="box">
+                <div className="box" onClick={() => setAbout(true)}>
                   <div className="flex-1">
                     <div className="avatar">
                       <BsPatchQuestion className="icon" />
@@ -144,6 +145,47 @@ const Others = () => {
           </div>
         </Modal>
       </div>
+
+      <div className="modal">
+        <Modal
+          disableAutoFocus
+          open={about}
+          onClose={() => setAbout(false)}
+          sx={{ background: "rgba(114, 113, 113, 0.58)" }}
+        >
+          <div className="about-modal">
+            <div className="section">
+              <div className="info">
+                <p> Hello, </p>
+                <p>
+                  The future of digital finance rests on the shoulders of
+                  cryptocurrencies. Now, you can send, receive, and transact
+                  crypto and gift cards fast, seamlessly, and efficiently.
+                </p>
+                <p>
+                  Whether you are new to crypto or already part of the
+                  community, Jagaban is the leading crypto platform that aims at
+                  improving crypto adoption across Africa, while leveraging on
+                  innovation and exciting technology.
+                </p>
+                <p>
+                  Our platform is built to ensure your overall user experience
+                  is positive, and your cross border transactions are possible.
+                </p>
+                <p> Do More with Crypto!</p>
+              </div>
+
+              <div className="btns">
+                <div className="terms">Terms and Conditions</div>
+                <div className="terms policy">Privacy Policy</div>
+              </div>
+
+              <div className="copy">(c) Jagaban Technologies 2025</div>
+            </div>
+            <div className="section empty-img"></div>
+          </div>
+        </Modal>
+      </div>
     </div>
   );
 };
@@ -156,24 +198,92 @@ const FAQ = ({ faq, setFaq }) => {
       onClose={() => setFaq(false)}
       sx={{ background: "rgba(0, 0, 0, 0.5)" }}
     >
-      <div className="addaccount-pop">
-        <div className="title">
+      <div className="faq-pop">
+        <div className="quit-btn" onClick={() => setFaq(false)}>
           <h3>FAQs</h3>
 
-          <div className="quit-btn" onClick={() => setFaq(false)}>
-            <LiaTimesSolid className="icon" />
-          </div>
+          <LiaTimesSolid className="icon" />
         </div>
 
         <div className="accordion">
-          <Accordion>
-            <AccordionSummary expandIcon={<FaAngleDown />}>
-              jhihih
+          <Accordion className="accordion-body">
+            <AccordionSummary expandIcon={<FaAngleDown />} className="summary">
+              How do I download the Jagaba App?
             </AccordionSummary>
-            <AccordionDetails>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
+            <AccordionDetails className="details">
+              To get the App, Use the IOS or Android store links to download it.
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion className="accordion-body">
+            <AccordionSummary expandIcon={<FaAngleDown />} className="summary">
+              How do I download the Jagaban App?
+            </AccordionSummary>
+            <AccordionDetails className="details">
+              To get the App, Use the IOS or Android store links to download it.
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion className="accordion-body">
+            <AccordionSummary expandIcon={<FaAngleDown />} className="summary">
+              How do I download the Jagaban App?
+            </AccordionSummary>
+            <AccordionDetails className="details">
+              To get the App, Use the IOS or Android store links to download it.
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion className="accordion-body">
+            <AccordionSummary expandIcon={<FaAngleDown />} className="summary">
+              How do I download the Jagaban App?
+            </AccordionSummary>
+            <AccordionDetails className="details">
+              To get the App, Use the IOS or Android store links to download it.
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion className="accordion-body">
+            <AccordionSummary expandIcon={<FaAngleDown />} className="summary">
+              How do I download the Jagaban App?
+            </AccordionSummary>
+            <AccordionDetails className="details">
+              To get the App, Use the IOS or Android store links to download it.
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion className="accordion-body">
+            <AccordionSummary expandIcon={<FaAngleDown />} className="summary">
+              How do I download the Jagaban App?
+            </AccordionSummary>
+            <AccordionDetails className="details">
+              To get the App, Use the IOS or Android store links to download it.
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion className="accordion-body">
+            <AccordionSummary expandIcon={<FaAngleDown />} className="summary">
+              How do I download the Jagaban App?
+            </AccordionSummary>
+            <AccordionDetails className="details">
+              To get the App, Use the IOS or Android store links to download it.
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion className="accordion-body">
+            <AccordionSummary expandIcon={<FaAngleDown />} className="summary">
+              How do I download the Jagaban App?
+            </AccordionSummary>
+            <AccordionDetails className="details">
+              To get the App, Use the IOS or Android store links to download it.
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion className="accordion-body">
+            <AccordionSummary expandIcon={<FaAngleDown />} className="summary">
+              How do I download the Jagaban App?
+            </AccordionSummary>
+            <AccordionDetails className="details">
+              To get the App, Use the IOS or Android store links to download it.
             </AccordionDetails>
           </Accordion>
         </div>

@@ -138,10 +138,122 @@
         align-items: center;
         gap: 10px;
 
-        .icon{
+        .icon {
           font-size: 22px;
         }
       }
+    }
+  }
+}
+
+.faq-pop {
+  background-color: white;
+  width: 480px;
+  height: fit-content;
+  padding: 1em 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+
+  .quit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+      font-weight: 500;
+      font-size: 17px;
+    }
+    .icon {
+      cursor: pointer;
+    }
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 300px;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 1em 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .accordion-body {
+      border: none;
+      width: 98%;
+      margin: auto;
+
+      .summary {
+        font-size: 16px;
+      }
+
+      .details {
+        font-size: 14px;
+        color: rgb(107, 107, 107);
+      }
+    }
+  }
+}
+
+.about-modal {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+  width: 100%;
+  height: 85vh;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+
+  .section {
+    width: 40%;
+
+    .info {
+      font-size: 15px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      margin-top: 3em;
+      color: #616060;
+    }
+
+    .btns {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      margin-top: 2em;
+
+      .terms {
+        width: 270px;
+        height: 50px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        background-color: #029588;
+        cursor: pointer;
+      }
+
+      .policy {
+        color: black;
+        background-color: rgb(241, 241, 241);
+      }
+    }
+
+    .copy {
+      margin-top: 2em;
     }
   }
 }

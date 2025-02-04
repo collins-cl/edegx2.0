@@ -23,3 +23,14 @@
     color: #4caf50;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    margin-top: 1.5em;
+    a {
+      display: inline-block;
+      width: 100%;
+      height: fit-content;
+    }
+  }
+}

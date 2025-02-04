@@ -279,3 +279,118 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .quickaction {
+    margin-top: 1em;
+
+    .quick-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      a {
+        width: 115px;
+        height: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .icon-case {
+          height: 50px;
+          width: 50px;
+
+          .icon {
+            font-size: 22px;
+          }
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .carousel-wrapper {
+      margin-top: 1em;
+    }
+
+    .cryptos-wrapper {
+      margin-top: 1em;
+    }
+  }
+
+  .deposit-modal {
+    background-color: white;
+    width: 90%;
+    height: fit-content;
+    padding: 1em;
+
+    h3 {
+      font-size: 19px;
+    }
+
+    .dp-method {
+      margin-top: 1em;
+
+      .box {
+        height: 65px;
+        width: 100%;
+
+        .img {
+          width: 40px;
+          height: 40px;
+        }
+
+        .currency {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .withdraw-modal {
+    background-color: white;
+    width: 90%;
+    height: fit-content;
+    padding: 1em;
+
+    h3 {
+      font-size: 19px;
+    }
+
+    .dp-method {
+      margin-top: 1em;
+
+      .box {
+        height: 65px;
+        width: 100%;
+
+        .img {
+          width: 40px;
+          height: 40px;
+        }
+
+        .currency {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .naira-deposit {
+    background-color: white;
+    width: 90%;
+    height: fit-content;
+    padding: 1em;
+
+    .add-acct {
+      margin-top: 1em;
+      width: 100%;
+    }
+  }
+}

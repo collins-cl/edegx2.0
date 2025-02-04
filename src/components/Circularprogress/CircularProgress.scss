@@ -38,3 +38,18 @@
     text-align: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .circular-progress {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .progress-text {
+      font-size: 9px;
+    }
+  }
+}

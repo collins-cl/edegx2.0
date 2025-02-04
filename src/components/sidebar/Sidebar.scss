@@ -89,3 +89,9 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .sidebar-cont {
+    display: none;
+  }
+}

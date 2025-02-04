@@ -84,3 +84,75 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .cryptos {
+    margin-top: 1.5em;
+    .title {
+      font-weight: bold;
+    }
+
+    .assets-container {
+      margin-top: 1em;
+      width: 95vw;
+      overflow: scroll;
+
+      .head {
+        // overflow: scroll;
+        width: 700px;
+        height: 50px;
+
+        p {
+          font-size: 13px;
+        }
+      }
+
+      .contents {
+        margin-top: 0.5em;
+        width: 700px;
+
+        .token {
+          div {
+            width: 19%;
+            height: 45px;
+            margin-top: 0;
+          }
+
+          .asset {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            img {
+              width: 25px;
+              height: 25px;
+            }
+
+            p {
+              font-size: 15px;
+            }
+          }
+
+          .price {
+            font-size: 14px;
+          }
+
+          .price-change {
+            font-size: 16px;
+            color: green;
+            display: flex;
+            align-items: center;
+          }
+
+          .trade {
+            .btn {
+              width: 180px;
+              height: 40px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

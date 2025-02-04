@@ -5,8 +5,13 @@ import { LiaTableSolid } from "react-icons/lia";
 import { CiGift, CiWallet } from "react-icons/ci";
 import { IoBarChartOutline } from "react-icons/io5";
 import { PiTelegramLogo } from "react-icons/pi";
+import { LiaTimesSolid } from "react-icons/lia";
+import { Modal } from "@mui/material";
+import { useState } from "react";
 
 const Sidebar = () => {
+  const [logout, setLogOut] = useState(false);
+
   return (
     <div className="sidebar-cont">
       <div className="sidebar-wrapper">
@@ -40,12 +45,38 @@ const Sidebar = () => {
         </div>
 
         <div className="side-profile">
-          <div className="side-p-container">
+          <div className="side-p-container" onClick={()=>setLogOut(true)}>
             <HiOutlineArrowRight className="arrow-rdt" />
 
             <p>Logout</p>
           </div>
         </div>
+      </div>
+
+      <div className="modal">
+        <Modal
+          disableAutoFocus
+          open={logout}
+          onClose={() => setLogOut(false)}
+          sx={{ background: "rgba(114, 113, 113, 0.58)" }}
+        >
+          <div className="logout-modal">
+            <div className="quit-btn" onClick={() => setLogOut(false)}>
+              <LiaTimesSolid className="icon" />
+            </div>
+
+            <div className="title">Log Out</div>
+
+            <p>Are you sure you want to log out of your Jagaban account?</p>
+
+            <div className="actions">
+              <div className="yes">Yes, Logout</div>
+              <div className="yes cancel" onClick={() => setLogOut(false)}>
+                Cancel
+              </div>
+            </div>
+          </div>
+        </Modal>
       </div>
     </div>
   );

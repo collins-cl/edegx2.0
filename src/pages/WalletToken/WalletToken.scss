@@ -227,3 +227,156 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .wallet-token {
+    padding: 0;
+    margin-top: 1em;
+
+    .wallet-wrapper {
+      padding: 0;
+      .top {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: flex-start;
+
+        .box-1 {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .drop-dwn {
+            position: relative;
+            cursor: pointer;
+
+            .card {
+              width: 120px;
+              height: 50px;
+              padding: 0 1em;
+            }
+          }
+
+          .val-percent {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+
+            .bal {
+              font-size: 0.9em;
+              font-weight: bold;
+            }
+
+            .percent {
+              width: 30px;
+              height: 25px;
+              font-size: 10px;
+            }
+          }
+
+          .time-frame {
+            width: 70px;
+            line-height: 1.3;
+            word-wrap: break-word;
+            font-size: 12px;
+            margin-left: 0;
+            text-align: end;
+          }
+        }
+
+        .box-2 {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: unset;
+          gap: 10px;
+
+          div {
+            width: 110px;
+            height: 50px;
+
+            .icon {
+              font-size: 16px;
+              font-weight: bold;
+            }
+
+            p {
+              font-size: 15px;
+            }
+          }
+
+          .receive {
+            background-color: #029588;
+            color: white;
+          }
+
+          .send {
+            border: 1px solid rgb(109, 109, 109);
+            cursor: not-allowed;
+          }
+        }
+      }
+
+      .bottom {
+        margin-top: 3em;
+
+        .title {
+          font-size: 16px;
+        }
+
+        .transact-container {
+          width: 100%;
+          height: 45vh;
+          margin-top: 1em;
+          border-radius: 20px;
+
+          p {
+            max-width: 80%;
+            margin: 0 auto;
+          }
+
+          .start {
+            margin-top: 1.5em;
+            width: 250px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  .trade-modal {
+    background-color: white;
+    width: 90%;
+    height: fit-content;
+    padding: 1em;
+
+    h3 {
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+
+    .qr-code {
+      width: 110px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .addy {
+      font-size: 15px;
+    }
+
+    .copy {
+      width: 100%;
+      height: 50px;
+    }
+  }
+}

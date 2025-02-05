@@ -14,6 +14,7 @@ const Buycards = () => {
   const [opensetcurrency, setOpenSetCurrency] = useState(false);
   const [buycardsmodal, setBuyCardsModal] = useState(false);
   const [isEmpty, setIsEmpty] = useState(false);
+  const [value, setValue] = useState(0);
 
   const closemodal = () => {
     setBuyCardsModal(false);
@@ -233,13 +234,20 @@ const Buycards = () => {
                     <label htmlFor="denomination">Number of cards</label>
 
                     <div className="input">
-                      <div className="plus">+</div>
+                      <div className="plus" onClick={() => setValue(value + 1)}>
+                        +
+                      </div>
                       <input
                         type="number"
-                        value={0}
+                        value={value}
                         onChange={(e) => console.log(e.target.value)}
                       />
-                      <div className="minus">-</div>
+                      <div
+                        className="minus"
+                        onClick={() => setValue(value - 1)}
+                      >
+                        -
+                      </div>
                     </div>
                   </div>
                 </div>

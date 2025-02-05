@@ -157,3 +157,113 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .wallets {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    margin-top: 1em;
+
+    .wallets-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column-reverse;
+      gap: 1em;
+
+      .section-1 {
+        width: 100%;
+        height: fit-content;
+        padding: 1.5em 1em;
+
+        .title {
+          h2 {
+            font-size: 19px;
+          }
+
+          p {
+            font-weight: 15px;
+          }
+        }
+
+        .c-wallets-wrapper {
+          .wrapper {
+            padding: 1em;
+
+            .cw-title {
+              font-size: 15px;
+            }
+
+            .tokens {
+              margin-top: 1em;
+
+              a {
+                width: 100%;
+                height: 110px;
+
+                .token {
+                  .wrap {
+                    padding: 0 1.5em;
+
+                    img {
+                      width: 35px;
+                      height: 35px;
+                    }
+
+                    .details {
+                      .name {
+                        font-size: 15px;
+                      }
+
+                      .amount {
+                        font-size: 16px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .section-2 {
+        width: 100%;
+        height: fit-content;
+        padding: 1.5em 1em;
+
+        .title {
+          font-size: 17px;
+        }
+
+        .balance-card {
+          width: 100%;
+          height: 150px;
+          margin-top: 1.5em;
+
+          .wrap {
+            padding: 0 1.5em;
+
+            .bal {
+              font-size: 16px;
+            }
+
+            .bal-val {
+              margin-top: 10px;
+              font-size: 1.4em;
+
+              .icon {
+                font-size: 20px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        .dark-box {
+          display: none;
+        }
+      }
+    }
+  }
+}

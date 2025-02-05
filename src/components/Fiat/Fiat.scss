@@ -49,3 +49,39 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .fiat {
+    margin-top: 1em;
+
+    .fiat-title {
+      margin-top: 1.5em;
+      position: relative;
+
+      div {
+        font-size: 14px;
+        width: 80px;
+        height: 30px;
+      }
+    }
+
+    .fiat-contents {
+      margin-top: 1.5em;
+      width: 100%;
+      overflow: scroll;
+
+      .wrapper {
+        padding: 1em;
+        width: 600px;
+
+        .fc-title {
+          margin-top: 0;
+
+          li {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}

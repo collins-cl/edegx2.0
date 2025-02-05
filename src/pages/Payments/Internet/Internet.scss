@@ -67,3 +67,41 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .internet {
+    padding: 0;
+    margin-top: 1em;
+
+    .wrapper {
+      width: 100%;
+      padding: 1em;
+
+      .title {
+        .func {
+          font-size: 18px;
+        }
+      }
+
+      .container {
+        height: fit-content;
+        padding: 1em;
+        gap: 1em;
+
+        li {
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1em;
+            .logo {
+              p {
+                font-weight: 100;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

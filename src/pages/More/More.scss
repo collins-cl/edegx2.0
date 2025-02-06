@@ -30,3 +30,38 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .more {
+    padding: 0;
+    margin-top: 1em;
+
+    .wrapper {
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        width: fit-content;
+        padding: 7px 12px;
+        border-radius: 10px;
+        background-color: rgb(239, 239, 239);
+
+        a {
+          width: 120px;
+          height: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          font-size: 15px;
+        }
+
+        .active-link {
+          font-weight: bold;
+          color: white;
+          background-color: #029588;
+        }
+      }
+    }
+  }
+}

@@ -25,12 +25,14 @@ import Cables from "./pages/Payments/Cables/Cables";
 import Dstv from "./pages/Payments/Cables/DSTV/Dstv";
 import Internet from "./pages/Payments/Internet/Internet";
 import Smile from "./pages/Payments/Internet/Smile/Smile";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Sidebar />
+        <Navbar />
         <div className="right-pane">
           <Topbar />
           <Routes>

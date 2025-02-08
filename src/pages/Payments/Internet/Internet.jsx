@@ -1,7 +1,7 @@
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import "../Internet/Internet.scss";
 import { Link } from "react-router-dom";
-import Sinternet from "../../../assets/cable/sinternet.svg";
+import Sinternet from "../../../assets/cable/Sinternet.svg";
 
 const Internet = () => {
   return (

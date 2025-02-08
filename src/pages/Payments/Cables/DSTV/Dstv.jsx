@@ -1,5 +1,5 @@
 import { FaAngleDown, FaAngleLeft } from "react-icons/fa6";
-import "../Dstv/Dstv.scss";
+import "../DSTV/Dstv.scss";
 
 const Dstv = () => {
   return (

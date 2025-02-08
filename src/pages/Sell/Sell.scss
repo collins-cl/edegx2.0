@@ -523,3 +523,189 @@
     background-color: #029588;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .sell {
+    padding: 0;
+    margin-top: 1em;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5em;
+      padding: 0 0 2em 0;
+
+      .tokens,
+      .action {
+        width: 100%;
+        padding: 1em;
+      }
+
+      .tokens {
+        .container {
+          .title {
+            font-size: 19px;
+          }
+
+          .token {
+            margin-top: 1em;
+            padding: 1em;
+
+            .search-tkn {
+              position: relative;
+            }
+
+            .tokens-list {
+              margin-top: 1em;
+              padding: 10px 0;
+              height: 30vh;
+
+              li {
+                .tkn {
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+
+                  .logo {
+                    width: 35px;
+                    height: 35px;
+                  }
+
+                  .details {
+                    .tkn-name {
+                      font-size: 15px;
+                    }
+                  }
+                }
+
+                .bal {
+                  .tkn-bal {
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .action {
+        .sel-crypto-filled {
+          .select-pane {
+            width: 100%;
+            padding: 7px;
+
+            a {
+              width: 120px;
+              height: 40px;
+            }
+          }
+
+          .contents {
+            .input-amt {
+              margin-top: 1em;
+              position: relative;
+
+              input {
+                width: 100%;
+                height: 45px;
+              }
+
+              .select-opt {
+                position: absolute;
+                top: 0;
+
+                .cur-pair {
+                  width: 130px;
+                  height: 45px;
+                  padding: 0 1em;
+                }
+              }
+            }
+
+            .perc-rate {
+              gap: 1em;
+
+              .card {
+                font-size: 14px;
+              }
+            }
+
+            .coin-amt {
+              margin-top: 3em;
+              position: relative;
+
+              input {
+                width: 100%;
+                height: 45px;
+              }
+
+              .select-opt {
+                position: absolute;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 130px;
+                height: 45px;
+
+                .coin-pair {
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sell-modal {
+    width: 90%;
+    height: fit-content;
+    padding: 1em;
+
+    .danger-img {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto;
+      margin-top: 5px;
+    }
+
+    .pop-info {
+      text-align: center;
+
+      h3 {
+        font-size: 22px;
+      }
+    }
+
+    .snd {
+      margin-top: 10px;
+      width: 100%;
+      height: 75px;
+
+      span {
+        font-size: 20px;
+      }
+    }
+
+    .receive {
+      margin-top: 1em;
+      width: 100%;
+      height: 75px;
+
+      span {
+        font-size: 20px;
+      }
+    }
+
+    .continue {
+      margin-top: 1em;
+      width: 100%;
+    }
+  }
+}

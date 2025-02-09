@@ -11,14 +11,19 @@ a {
   text-decoration: none;
 }
 
-html,
-body {
-  font-family: "Poppins";
-}
-
 @font-face {
   font-family: "Poppins";
   src: url("/src/fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+html,
+body {
+  font-family: "Montserrat";
 }
 
 .app {
@@ -31,7 +36,6 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-
 
 @media screen and (max-width: 768px) {
   .app {

@@ -21,7 +21,7 @@
         padding: 0 1em;
         height: 100%;
         width: 100%;
-        font-size: 18px;
+        font-size: 19px;
 
         .logo {
           p {
@@ -31,16 +31,97 @@
           }
         }
 
-        .btn-notif{
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .btn-notif {
+          display: flex;
+          align-items: center;
+          gap: 10px;
 
-            .icon{
-                fill: white;
-                font-size: 20px;
-            }
+          .icon {
+            fill: white;
+            font-size: 21px;
+          }
         }
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        padding: 1.5em 1em;
+        background-color: white;
+        width: 100%;
+        height: fit-content;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        a {
+          font-weight: bold;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  .logout-modal {
+    background-color: white;
+    width: 90%;
+    height: fit-content;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+
+    .quit-btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .icon {
+        cursor: pointer;
+      }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    p {
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: rgb(131, 130, 130);
+      max-width: 70%;
+      margin: auto;
+      margin-top: 1em;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      margin-top: 2em;
+
+      .yes {
+        width: 270px;
+        height: 50px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        background-color: #029588;
+        cursor: pointer;
+      }
+
+      .cancel {
+        color: black;
+        background-color: rgb(241, 241, 241);
       }
     }
   }

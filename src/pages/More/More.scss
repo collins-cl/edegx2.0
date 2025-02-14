@@ -38,17 +38,24 @@
 
     .wrapper {
       .title {
-        display: flex;
-        align-items: center;
-        gap: 1em;
-        width: fit-content;
-        padding: 7px 12px;
-        border-radius: 10px;
-        background-color: rgb(239, 239, 239);
+        overflow: scroll;
+        width: 100%;
+        padding: 7px 10px;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .container {
+          width: 600px;
+          display: flex;
+          align-items: center;
+          gap: 1em;
+        }
 
         a {
-          width: 120px;
-          height: 45px;
+          width: 100px;
+          height: 40px;
           display: flex;
           align-items: center;
           justify-content: center;

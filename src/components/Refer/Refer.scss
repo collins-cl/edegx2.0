@@ -128,3 +128,46 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .refer {
+    margin-top: 1em;
+    width: 100%;
+
+    .wrapper {
+      height: fit-content;
+      padding: 1em;
+
+      .container {
+        padding: 10px 0;
+
+        .border {
+          width: 100%;
+          margin: auto;
+          padding: 1em;
+
+          .refer-container {
+            margin-top: 1em;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            .box-img {
+              width: 80px;
+              height: 80px;
+            }
+
+            .box {
+              width: 100%;
+              margin-top: 2em;
+              display: flex;
+              flex-direction: column;
+              gap: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

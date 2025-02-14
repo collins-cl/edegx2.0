@@ -29,7 +29,7 @@ const Others = () => {
       <div className="wrapper">
         <div className="container">
           <div className="border">
-            <div className="others-title">others</div>
+            <div className="others-title">Others</div>
 
             <div className="security-container">
               <div className="card-1">

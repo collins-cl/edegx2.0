@@ -24,7 +24,7 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="hero-cnt">
-        <div className="intro">Jagaban</div>
+        {/* <div className="intro">Jagaban</div> */}
 
         <div className="banner">
           <div className="contents">

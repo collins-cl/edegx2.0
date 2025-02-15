@@ -42,7 +42,7 @@ body::-webkit-scrollbar {
     .right-pane {
       width: 95%;
       margin: auto;
-      padding-top: 60px;
+      padding-bottom: 70px;
       float: none;
     }
   }

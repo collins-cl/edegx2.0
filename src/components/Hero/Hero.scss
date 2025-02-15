@@ -1,5 +1,8 @@
 .hero {
   .hero-cnt {
+    .intro {
+      display: none;
+    }
     .banner {
       width: 100%;
       background-color: #029588;
@@ -167,9 +170,17 @@
 @media screen and (max-width: 768px) {
   .hero {
     .hero-cnt {
+      .intro {
+        display: block;
+        text-transform: uppercase;
+        font-size: 19px;
+        font-weight: bold;
+      }
+
       .banner {
         width: 100%;
         height: 150px;
+        margin-top: 10px;
 
         .contents {
           padding: 0 1em;

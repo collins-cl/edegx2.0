@@ -2,45 +2,82 @@ import { IoMdNotifications } from "react-icons/io";
 import "../Navbar/Navbar.scss";
 import { LiaBarsSolid, LiaTimesSolid } from "react-icons/lia";
 import { useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Modal } from "@mui/material";
+import { BsViewList } from "react-icons/bs";
+import { CiCircleMore, CiCreditCard1, CiWallet } from "react-icons/ci";
+import { TbGiftCard } from "react-icons/tb";
+import { GrTransaction } from "react-icons/gr";
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const [logout, setLogOut] = useState(false);
-  const navRef = useRef(null);
-  const btnRef = useRef(null); // Prevent closing when clicking the button
+  // const [open, setOpen] = useState(false);
+  // const [logout, setLogOut] = useState(false);
+  // const navRef = useRef(null);
+  // const btnRef = useRef(null); // Prevent closing when clicking the button
 
-  const handleLogOut = () => {
-    setLogOut(true);
-    setOpen(false);
-  };
+  // const handleLogOut = () => {
+  //   setLogOut(true);
+  //   setOpen(false);
+  // };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        navRef.current &&
-        !navRef.current.contains(event.target) &&
-        btnRef.current &&
-        !btnRef.current.contains(event.target)
-      ) {
-        setOpen(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (
+  //       navRef.current &&
+  //       !navRef.current.contains(event.target) &&
+  //       btnRef.current &&
+  //       !btnRef.current.contains(event.target)
+  //     ) {
+  //       setOpen(false);
+  //     }
+  //   };
 
-    if (open) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
+  //   if (open) {
+  //     document.addEventListener("mousedown", handleClickOutside);
+  //   }
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [open]);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [open]);
 
   return (
     <div className="navbar">
       <div className="container">
-        <div className="top">
+        <li>
+          <NavLink to="/overview">
+            <BsViewList className="icon" />
+            <p>overview</p>
+          </NavLink>
+
+          <NavLink to="/wallets">
+            <CiWallet className="icon" />
+            <p>wallet</p>
+          </NavLink>
+
+          <NavLink to="/giftcards">
+            <CiCreditCard1 className="icon" />
+            <p>cards</p>
+          </NavLink>
+
+          <NavLink to="/transactions">
+            <GrTransaction className="icon" />
+            <p>transact</p>
+          </NavLink>
+
+          <NavLink to="/payments">
+            <RiMoneyDollarCircleLine className="icon" />
+            <p>payment</p>
+          </NavLink>
+
+          <NavLink to="/more">
+            <CiCircleMore className="icon" />
+            <p>more</p>
+          </NavLink>
+        </li>
+
+        {/* <div className="top">
           <div className="logo">
             <p>Jagaban</p>
           </div>
@@ -61,34 +98,34 @@ const Navbar = () => {
         </div>
 
         {open && (
-          <div ref={navRef} className="nav-links">
-            <Link to="/overview" onClick={() => setOpen(false)}>
+          <div ref={navRef} className="nav-NavLinks">
+            <NavLink to="/overview" onClick={() => setOpen(false)}>
               Overview
-            </Link>
-            <Link to="/wallets" onClick={() => setOpen(false)}>
+            </NavLink>
+            <NavLink to="/wallets" onClick={() => setOpen(false)}>
               Wallets
-            </Link>
-            <Link to="/giftcards" onClick={() => setOpen(false)}>
+            </NavLink>
+            <NavLink to="/giftcards" onClick={() => setOpen(false)}>
               Giftcards
-            </Link>
-            <Link to="/transactions" onClick={() => setOpen(false)}>
+            </NavLink>
+            <NavLink to="/transactions" onClick={() => setOpen(false)}>
               Transactions
-            </Link>
-            <Link to="/payments" onClick={() => setOpen(false)}>
+            </NavLink>
+            <NavLink to="/payments" onClick={() => setOpen(false)}>
               Payments
-            </Link>
-            <Link to="/more" onClick={() => setOpen(false)}>
+            </NavLink>
+            <NavLink to="/more" onClick={() => setOpen(false)}>
               More
-            </Link>
-            <Link to="" onClick={handleLogOut}>
+            </NavLink>
+            <NavLink to="" onClick={handleLogOut}>
               Log out
-            </Link>
+            </NavLink>
           </div>
-        )}
+        )} */}
       </div>
 
       <div className="modal">
-        <Modal
+        {/* <Modal
           disableAutoFocus
           open={logout}
           onClose={() => setLogOut(false)}
@@ -110,7 +147,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-        </Modal>
+        </Modal> */}
       </div>
     </div>
   );

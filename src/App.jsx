@@ -26,13 +26,14 @@ import Dstv from "./pages/Payments/Cables/DSTV/Dstv";
 import Internet from "./pages/Payments/Internet/Internet";
 import Smile from "./pages/Payments/Internet/Smile/Smile";
 import Navbar from "./components/Navbar/Navbar";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Sidebar />
-        <Navbar />
+        <Header />
         <div className="right-pane">
           <Topbar />
           <Routes>
@@ -66,6 +67,7 @@ function App() {
             <Route path="/more" element={<More />} />
           </Routes>
         </div>
+        <Navbar />
       </div>
     </Router>
   );

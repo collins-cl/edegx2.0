@@ -1,4 +1,3 @@
-// import { IoMdNotifications } from "react-icons/io";
 import "../Navbar/Navbar.scss";
 // import { LiaBarsSolid, LiaTimesSolid } from "react-icons/lia";
 // import { useEffect, useState, useRef } from "react";

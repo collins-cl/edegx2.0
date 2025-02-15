@@ -1,12 +1,11 @@
-import { IoMdNotifications } from "react-icons/io";
+// import { IoMdNotifications } from "react-icons/io";
 import "../Navbar/Navbar.scss";
-import { LiaBarsSolid, LiaTimesSolid } from "react-icons/lia";
-import { useEffect, useState, useRef } from "react";
+// import { LiaBarsSolid, LiaTimesSolid } from "react-icons/lia";
+// import { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import { Modal } from "@mui/material";
+// import { Modal } from "@mui/material";
 import { BsViewList } from "react-icons/bs";
 import { CiCircleMore, CiCreditCard1, CiWallet } from "react-icons/ci";
-import { TbGiftCard } from "react-icons/tb";
 import { GrTransaction } from "react-icons/gr";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 

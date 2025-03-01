@@ -1,12 +1,14 @@
 import { FaAngleDown, FaAngleLeft } from "react-icons/fa6";
 import "../Airtime/Airtime.scss";
+import { useNavigate } from "react-router-dom";
 
 const Airtime = () => {
+  const history = useNavigate();
   return (
     <div className="airtime">
       <div className="wrapper">
         <div className="title">
-          <div className="back">
+          <div className="back" onClick={() => history(-1)}>
             <FaAngleLeft className="title-icon" />
           </div>
 

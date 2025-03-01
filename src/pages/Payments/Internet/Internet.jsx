@@ -1,14 +1,16 @@
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import "../Internet/Internet.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Sinternet from "../../../assets/cable/Sinternet.svg";
 
 const Internet = () => {
+  const history = useNavigate();
+
   return (
     <div className="internet">
       <div className="wrapper">
         <div className="title">
-          <div className="back">
+          <div className="back" onClick={() => history(-1)}> 
             <FaAngleLeft className="title-icon" />
           </div>
 

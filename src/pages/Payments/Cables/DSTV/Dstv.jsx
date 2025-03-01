@@ -1,12 +1,15 @@
 import { FaAngleDown, FaAngleLeft } from "react-icons/fa6";
 import "../DSTV/Dstv.scss";
+import { useNavigate } from "react-router-dom";
 
 const Dstv = () => {
+  const history = useNavigate();
+
   return (
     <div className="dstv">
       <div className="wrapper">
         <div className="title">
-          <div className="back">
+          <div className="back" onClick={() => history(-1)}>
             <FaAngleLeft className="title-icon" />
           </div>
 

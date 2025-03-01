@@ -1,12 +1,15 @@
 import { FaAngleDown, FaAngleLeft } from "react-icons/fa6";
 import "../Data/Data.scss";
+import { useNavigate } from "react-router-dom";
 
 const Data = () => {
+  const history = useNavigate();
+
   return (
     <div className="data">
       <div className="wrapper">
         <div className="title">
-          <div className="back">
+          <div className="back" onClick={() => history(-1)}>
             <FaAngleLeft className="title-icon" />
           </div>
 

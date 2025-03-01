@@ -394,3 +394,40 @@
     }
   }
 }
+
+@media screen and (max-width: 375px) {
+  .quickaction {
+    margin-top: 1em;
+
+    .quick-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      a {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .icon-case {
+          height: 40px;
+          width: 40px;
+
+          .icon {
+            font-size: 20px;
+          }
+        }
+
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

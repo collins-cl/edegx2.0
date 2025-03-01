@@ -1,14 +1,16 @@
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import "../Cables/Cables.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import DSTV from "../../../assets/cable/dstv.svg";
 
 const Cables = () => {
+  const history = useNavigate();
+
   return (
     <div className="cable">
       <div className="wrapper">
         <div className="title">
-          <div className="back">
+          <div className="back" onClick={() => history(-1)}>
             <FaAngleLeft className="title-icon" />
           </div>
 
